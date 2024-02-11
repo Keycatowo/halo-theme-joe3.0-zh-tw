@@ -5,12 +5,12 @@ metadata:
 spec:
   displayName: Theme Joe3
   author:
-    name: Jiewenhuang
+    name: owo
     website: "https://halo.run"
-  description: Halo2.0主題 Joe3
+  description: Halo2.0主題 Joe3.0 (繁體中文版)
   logo: "https://wmimg.com/i/70/2023/08/64d3c41d5bde2.webp"
   website: "https://www.jiewen.run"
-  repo: "https://github.com/jiewenhuang/halo-theme-joe3.0"
+  repo: "https://github.com/Keycatowo/halo-theme-joe3.0-zh-tw"
   settingName: "theme-Joe-setting"
   configMapName: "theme-Joe-configMap"
   version: "1.1.9"
