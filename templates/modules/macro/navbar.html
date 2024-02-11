@@ -41,7 +41,7 @@
             </th:block>
           </th:block>
         </th:block>
-<!--        自选导航-->
+<!--        自選導航-->
         <th:block th:if="${not #lists.isEmpty(theme.config.navbar.menu)}">
           <th:block th:with="menu = ${menuFinder.getByName(theme.config.navbar.menu)}">
               <th:block th:with="menuItems = ${menu.menuItems}">
@@ -72,7 +72,7 @@
       <div class="joe_header__above-search">
 <!--        <div class="nav_login">-->
 <!--          <th:block th:if="${#authentication.name == 'anonymousUser'}">-->
-<!--          <a href="/console" title="搜索"><i class="jiewen joe-icon-zhanghao"></i></a>-->
+<!--          <a href="/console" title="搜尋"><i class="jiewen joe-icon-zhanghao"></i></a>-->
 <!--          </th:block>-->
 <!--          <th:block th:if="${#authentication.name != 'anonymousUser'}">-->
 <!--            <th:block th:with="contributor = ${contributorFinder.getContributor(#authentication.name)}">-->
@@ -80,8 +80,8 @@
 <!--            </th:block>-->
 <!--          </th:block>-->
 <!--        </div>-->
-<!--        <input maxlength="16" autocomplete="off" placeholder="请输入关键字..." name="keyword" value="" class="input" type="text">-->
-        <button type="submit" id="halo-search" class="submit" style="border-radius: 17px 17px 17px 17px" aria-label="搜索按钮"><i class="joe-font joe-icon-search"></i></button>
+<!--        <input maxlength="16" autocomplete="off" placeholder="請輸入關鍵字..." name="keyword" value="" class="input" type="text">-->
+        <button type="submit" id="halo-search" class="submit" style="border-radius: 17px 17px 17px 17px" aria-label="搜尋按鈕"><i class="joe-font joe-icon-search"></i></button>
 <!--        <span class="icon"></span>-->
 <th:block th:if="${theme.config.navbar.nav_login}">
         <div class="nav_login">
@@ -98,9 +98,9 @@
         </div>
 </th:block>
 <!--        <nav class="result">-->
-<!--          <a href="archives/ce-shi-wen-zhang.html" title="测试文章" class="item">-->
+<!--          <a href="archives/ce-shi-wen-zhang.html" title="測試文章" class="item">-->
 <!--            <span class="sort">1</span>-->
-<!--            <span class="text">测试文章</span>-->
+<!--            <span class="text">測試文章</span>-->
 <!--          </a>-->
 <!--          <a href="archives/hello-halo.html" title="Hello Halo" class="item">-->
 <!--            <span class="sort">2</span>-->
@@ -109,17 +109,17 @@
 <!--        </nav>-->
       </div>
 
-      <a href="javascript:SearchWidget.open()" title="搜索"><i class="joe-font joe-icon-search joe_header__above-searchicon"></i></a>
+      <a href="javascript:SearchWidget.open()" title="搜尋"><i class="joe-font joe-icon-search joe_header__above-searchicon"></i></a>
     </div>
   </div>
 
   <div class="joe_header__slideout">
     <div class="joe_header__slideout-wrap">
-      <img width="100%" height="150" class="joe_header__slideout-image" th:src="${theme.config.blogger.author_bg ?: #theme.assets('/img/author_bg.jpg')}"  alt="侧边栏壁纸">
+      <img width="100%" height="150" class="joe_header__slideout-image" th:src="${theme.config.blogger.author_bg ?: #theme.assets('/img/author_bg.jpg')}"  alt="側邊欄桌布">
       <div class="joe_header__slideout-author">
-        <img width="50" height="50" class="avatar ls-is-cached lazyloaded" th:data-src="${theme.config.blogger.lazyload_avatar}" th:src="${theme.config.blogger.avatar ?: theme.config.blogger.default_avatar}"  alt="博主头像">
+        <img width="50" height="50" class="avatar ls-is-cached lazyloaded" th:data-src="${theme.config.blogger.lazyload_avatar}" th:src="${theme.config.blogger.avatar ?: theme.config.blogger.default_avatar}"  alt="博主頭像">
         <div class="info">
-          <a class="link" th:href="${site.url}" target="_blank" rel="noopener noreferrer nofollow">[[${theme.config.blogger.name ?: site.title}]]<img class="level" th:src="@{/assets/svg/level_1.svg}"  alt="博主等级"></a>
+          <a class="link" th:href="${site.url}" target="_blank" rel="noopener noreferrer nofollow">[[${theme.config.blogger.name ?: site.title}]]<img class="level" th:src="@{/assets/svg/level_1.svg}"  alt="博主等級"></a>
 
           <p class="motto joe_motto">[[${theme.config.blogger.motto}]]</p>
         </div>
@@ -127,24 +127,24 @@
       <ul class="joe_header__slideout-count" th:with="stats = ${siteStatsFinder.getStats()}">
         <li class="item">
           <i class="jiewen joe-icon-danganguanli"></i>
-          <span>累计撰写 <strong>[[${stats.post}]]</strong> 篇文章</span>
+          <span>累計撰寫 <strong>[[${stats.post}]]</strong> 篇文章</span>
         </li>
         <th:block th:with="tags = ${tagFinder.listAll()}">
         <li class="item" th:with="tagNum = ${#lists.size(tags)}">
           <i class="joe-font joe-icon-remen"></i>
-          <span>累计创建 <strong>[[${tagNum}]]</strong> 个标签</span>
+          <span>累計建立 <strong>[[${tagNum}]]</strong> 個標籤</span>
         </li>
         </th:block>
         <th:block th:if="${theme.config.basic.comment_option == 'default'} or ${#strings.trim(theme.config.basic.waline.waline_serverURL) ==''}">
         <li class="item">
           <i class="joe-font joe-icon-message"></i>
-          <span>累计收到 <strong>[[${stats.comment}]]</strong> 条评论</span>
+          <span>累計收到 <strong>[[${stats.comment}]]</strong> 條評論</span>
         </li>
         </th:block>
         <th:block th:if="${theme.config.basic.comment_option == 'waline'} and ${#strings.trim(theme.config.basic.waline.waline_serverURL) !=''}">
           <li class="item">
             <i class="joe-font joe-icon-message"></i>
-            <span class="m-waline-comment-count">累计收到 <strong>0</strong> 条评论</span>
+            <span class="m-waline-comment-count">累計收到 <strong>0</strong> 條評論</span>
           </li>
           <script th:inline="javascript" th:if="${theme.config.basic.comment_option=='waline'} and ${#strings.trim(theme.config.basic.waline.waline_serverURL) !=''}">
             const url = [[${theme.config.basic.waline.waline_serverURL+'/api/comment?type=count'}]];
@@ -158,7 +158,7 @@
       <ul class="joe_header__slideout-menu panel-box">
         <li>
           <a class="link panel in" href="#" rel="nofollow">
-            <span>栏目</span>
+            <span>欄目</span>
             <i class="joe-font joe-icon-arrow-right"></i>
           </a>
           <ul class="slides panel-body panel-box panel-side-menu" style="display: block;">
@@ -238,13 +238,13 @@
   </div>
 
   <div class="joe_header__searchout">
-    <a href="javascript:SearchWidget.open()" title="搜索"></a>
+    <a href="javascript:SearchWidget.open()" title="搜尋"></a>
 <!--    <div class="joe_container">-->
 
 <!--      <div class="joe_header__searchout-inner">-->
 <!--        <form class="joe_header__above-search-mobile" method="get" action="http://localhost:8093/search">-->
-<!--          <input maxlength="16" autocomplete="off" placeholder="请输入关键字..." name="keyword" value="" class="input" type="text">-->
-<!--          <button type="submit" class="submit">搜索</button>-->
+<!--          <input maxlength="16" autocomplete="off" placeholder="請輸入關鍵字..." name="keyword" value="" class="input" type="text">-->
+<!--          <button type="submit" class="submit">搜尋</button>-->
 <!--        </form>-->
 <!--      </div>-->
 <!--    </div>-->
@@ -253,8 +253,8 @@
   <div class="joe_header__toc">
     <div class="joe_header__toc-wrap">
       <div class="toc_top">
-        <h3>目 录<span>CONTENT</span></h3>
-        <img width="100%" height="150" th:src="${theme.config.blogger.author_bg?:'/themes/theme-Joe3/assets/img/context_bg.png'}"  alt="文章目录">
+        <h3>目 錄<span>CONTENT</span></h3>
+        <img width="100%" height="150" th:src="${theme.config.blogger.author_bg?:'/themes/theme-Joe3/assets/img/context_bg.png'}"  alt="文章目錄">
       </div>
       <div id="js-toc-mobile" class="toc"></div>
     </div>

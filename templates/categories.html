@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{modules/layout :: html(title = ${theme.config.categories.categories_title ?: '全部标签'}+'-'+${site.title},htmlType = categories,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
+      th:replace="~{modules/layout :: html(title = ${theme.config.categories.categories_title ?: '全部標籤'}+'-'+${site.title},htmlType = categories,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
 >
   <th:block th:fragment="content">
     <body>
     <div id="Joe" th:with="categories = ${categoryFinder.listAll()}">
       <th:block th:replace="~{modules/macro/navbar :: navbar}" />
-      <!--          首页大图-->
+      <!--          首頁大圖-->
       <th:block th:if="${theme.config.beauty.enable_big_banner}">
         <th:block th:replace="~{modules/macro/big_banner :: big_banner(${title})}" />
       </th:block>
@@ -16,7 +16,7 @@
           <div class="joe_index">
             <div class="joe_index__title">
               <ul class="joe_index__title-title pl-15">
-                <li class="item active">[[${theme.config.categories.categories_title ?: '全部分类'}]]<span class="totals">[[${#lists.size(categories)}]]</span></li>
+                <li class="item active">[[${theme.config.categories.categories_title ?: '全部分類'}]]<span class="totals">[[${#lists.size(categories)}]]</span></li>
               </ul>
             </div>
             <div class="joe_index__hot categories">

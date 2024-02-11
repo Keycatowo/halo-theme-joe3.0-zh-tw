@@ -10,7 +10,7 @@ NProgress.configure({
 	speed: 1000,
 });
 
-// pjax开始
+// pjax開始
 $(document).on("pjax:send", function () {
 	NProgress.start();
 	if ($("#js-toc").length) tocbot.destroy();
@@ -22,7 +22,7 @@ $(document).on("pjax:send", function () {
 	);
 });
 
-// pjax结束
+// pjax結束
 $(document).on("pjax:complete", function () {
 	NProgress.done();
 	$("script[data-pjax]").each(function () {

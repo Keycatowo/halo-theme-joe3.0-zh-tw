@@ -1,9 +1,9 @@
-// 首页大图
+// 首頁大圖
 (function() {
     "use strict";
     const EvanBigBanner = function(options) {
         if (!(this instanceof EvanBigBanner)) { return new EvanBigBanner(options) }
-        this.options = Object.assign({}, { followMode: false, followTheme: false, titlePrint: false, titlePrintInterval: 300, titleTiktok: false, titleText: "来自小莫唐尼的Joe首页大图", titleColor: "#ffffff", titleShadow: "-3px 2px 6px #1c1f21", hitokotoParams: {}, hitokotoApi: "https://v1.hitokoto.cn", hitokotoColor: "#ffffff", hitokotoEnable: true, }, options);
+        this.options = Object.assign({}, { followMode: false, followTheme: false, titlePrint: false, titlePrintInterval: 300, titleTiktok: false, titleText: "來自小莫唐尼的Joe首頁大圖", titleColor: "#ffffff", titleShadow: "-3px 2px 6px #1c1f21", hitokotoParams: {}, hitokotoApi: "https://v1.hitokoto.cn", hitokotoColor: "#ffffff", hitokotoEnable: true, }, options);
         this.init()
     };
     const Utils = { checkIsMobile: function() { return /Mobi|Android|iPhone/i.test(navigator.userAgent) }, };

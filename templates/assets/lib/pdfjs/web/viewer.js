@@ -1,5 +1,5 @@
 /**
- * 注释了PDF浏览历史的功能
+ * 註釋了PDF瀏覽歷史的功能
  * @licstart The following is the entire license notice for the
  * Javascript code in this page
  *

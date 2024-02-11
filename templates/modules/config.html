@@ -9,7 +9,7 @@
         <th:block th:replace="~{modules/pageMetaVariable :: pageSetting}" />
     </th:block>
     <script id="compatiable-checker">
-        // 兼容性检查
+        // 相容性檢查
         function detectIE() {
             var n = window.navigator.userAgent, e = n.indexOf("MSIE ");
             if (e > 0) {
@@ -22,7 +22,7 @@
             var i = n.indexOf("Edge/");
             return i > 0 && parseInt(n.substring(i + 5, n.indexOf(".", i)), 10);
         };
-        detectIE() && (alert('当前站点不支持IE浏览器或您开启了兼容模式，请使用其他浏览器访问或关闭兼容模式。'), (location.href = 'https://www.baidu.com'));
+        detectIE() && (alert('當前站點不支援IE瀏覽器或您開啟了相容模式，請使用其他瀏覽器訪問或關閉相容模式。'), (location.href = 'https://www.baidu.com'));
     </script>
 
 
@@ -34,10 +34,10 @@
     }
 
     if (ThemeConfig.mode === "development") {
-        console.log("Joe3主题配置：", ThemeConfig);
-        console.log("资源根路径：", ThemeConfig.BASE_RES_URL);
+        console.log("Joe3主題配置：", ThemeConfig);
+        console.log("資源根路徑：", ThemeConfig.BASE_RES_URL);
     }
-    // 读取主题模式
+    // 讀取主題模式
     var initThemeMode = function() {
         try {
             var curMode = "";
@@ -48,11 +48,11 @@
                 var curMode = now >= new Date(today + " " + light_scope[0]) && now <= new Date(today + " " + light_scope[1]) ? "light" : "dark";
                 localStorage.removeItem("data-mode");
             } else if (ThemeConfig.theme_mode === "user") {
-                // 用户模式下优先从本地取主题模式，默认为浅色
+                // 使用者模式下優先從本地取主題模式，預設為淺色
                 curMode = localStorage.getItem("data-mode") || "light";
                 localStorage.setItem("data-mode", curMode);
             } else {
-                // 非用户模式下直接取后台配置的模式
+                // 非使用者模式下直接取後臺配置的模式
                 curMode = ThemeConfig.theme_mode;
                 localStorage.removeItem("data-mode");
             }

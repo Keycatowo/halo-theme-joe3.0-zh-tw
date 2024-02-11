@@ -5,20 +5,20 @@
     <ul class="joe_bread__bread">
       <li class="item">
         <i class="jiewen joe-icon-shouye"></i>
-        <a href="/" class="link" title="首页">首页</a>
+        <a href="/" class="link" title="首頁">首頁</a>
       </li>
       <th:block th:if="${not #lists.isEmpty(post.categories)}">
         <th:block th:with="category = ${post.categories[0]}">
       <li class="line">/</li>
       <li class="item">
-        <a class="link" th:href="${category.status.permalink}" th:title="${category.spec.displayName ?: '默认分类'}">[[${category.spec.displayName ?: '默认分类'}]]</a>
+        <a class="link" th:href="${category.status.permalink}" th:title="${category.spec.displayName ?: '預設分類'}">[[${category.spec.displayName ?: '預設分類'}]]</a>
       </li>
         </th:block>
       </th:block>
       <th:block th:if="${#lists.isEmpty(post.categories)}">
       <li class="line">/</li>
       <li class="item">
-        <a class="link" th:href="${site.url}" title="未分类">未分类</a>
+        <a class="link" th:href="${site.url}" title="未分類">未分類</a>
       </li>
       </th:block>
   <li class="line">/</li>

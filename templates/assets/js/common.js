@@ -1,11 +1,11 @@
-/**通用逻辑 */
+/**通用邏輯 */
 window.encryption = (str) => window.btoa(unescape(encodeURIComponent(str)));
 window.decrypt = (str) => decodeURIComponent(escape(window.atob(str)));
 
 const commonContext = {
-	/* 初始化主题模式（仅用户模式） */
+	/* 初始化主題模式（僅使用者模式） */
 	initMode() {
-		// 取消Chrome浏览器默认滚动到上次浏览位置
+		// 取消Chrome瀏覽器預設滾動到上次瀏覽位置
 		if ("scrollRestoration" in history) {
 			history.scrollRestoration = "manual";
 		}
@@ -15,11 +15,11 @@ const commonContext = {
 		const $icon_dark = $(".mode-dark");
 		let local_theme = localStorage.getItem("data-mode");
 
-		// 图标状态
+		// 圖示狀態
 		$icon_light[`${local_theme === "light" ? "remove" : "add"}Class`]("active");
 		$icon_dark[`${local_theme === "light" ? "add" : "remove"}Class`]("active");
 
-		// 手动切换
+		// 手動切換
 		$(".joe_action_item.mode").on("click", function (e) {
 			e.stopPropagation();
 			try {
@@ -33,7 +33,7 @@ const commonContext = {
 					$icon_dark[`${local_theme === "light" ? "remove" : "add"}Class`](
 						"active"
 					);
-					// var commentElement = document.querySelector("halo\\:comment"); // 使用反斜杠转义冒号
+					// var commentElement = document.querySelector("halo\\:comment"); // 使用反斜槓轉義冒號
 					// commentElement.setAttribute("colorScheme", "'" + local_theme + "'");
 				} else {
 					theme = "dark";
@@ -48,7 +48,7 @@ const commonContext = {
 			}
 		});
 	},
-	/* 加载条 */
+	/* 載入條 */
 	loadingBar: {
 		show() {
 			if (!ThemeConfig.enable_loading_bar) return;
@@ -64,7 +64,7 @@ const commonContext = {
 			NProgress.done(true);
 		},
 	},
-	/* 导航条高亮 */
+	/* 導航條高亮 */
 	initNavbar() {
 		const $nav_menus = $(".joe_header__above-nav a");
 		const $nav_side_menus = $(".panel-side-menu .link");
@@ -88,16 +88,16 @@ const commonContext = {
 				.addClass("current");
 		}
 
-		// 高亮移动端
+		// 高亮移動端
 		$nav_side_menus.eq(activeIndex).addClass("current");
 	},
-	/* 页脚位置 */
+	/* 頁尾位置 */
 	initFooter() {
 		if (!ThemeConfig.enable_footer || ThemeConfig.footer_position !== "fixed")
 			return;
 		$("#Joe").css("margin-bottom", $(".joe_footer").height() + 30);
 	},
-	/* 初始化评论主题 */
+	/* 初始化評論主題 */
 	initCommentTheme() {
 		const comments = document.getElementsByTagName("halo-comment");
 		const curMode = document.querySelector("html").getAttribute("data-mode");
@@ -107,7 +107,7 @@ const commonContext = {
 			$(shadowDom)[`${curMode === "light" ? "remove" : "add"}Class`]("dark");
 		}
 	},
-	/* 初始化代码区域，高亮 + 行号 + 折叠 + 复制 */
+	/* 初始化程式碼區域，高亮 + 行號 + 摺疊 + 複製 */
 	initCode(isRefresh) {
 		// const isPost = $(".page-post").length > 0;
 		const $codeElms = $(".page-post pre, .page-journals pre, .page-sheet pre");
@@ -118,7 +118,7 @@ const commonContext = {
 			const $codes = $item.find("code");
 			if ($codes.length > 0) {
 				if (isRefresh) {
-					// 更新时重新绑定事件
+					// 更新時重新繫結事件
 					$item
 						.find(".code-expander")
 						.off("click")
@@ -134,7 +134,7 @@ const commonContext = {
 						});
 					return;
 				}
-				// 添加默认代码类型为纯文本（已在prism源码中处理）
+				// 新增預設程式碼型別為純文字（已在prism原始碼中處理）
 				// const $curCode = $codes.eq(0);
 				// if (
 				// 	!$curCode.attr("class") ||
@@ -152,11 +152,11 @@ const commonContext = {
 				// ThemeConfig.enable_code_line_number
 				// 	? $item.addClass("line-numbers")
 				// 	: null;
-				// 代码折叠
+				// 程式碼摺疊
 				if (ThemeConfig.enable_code_expander) {
 					$item
 						.prepend(
-							"<i class=\"joe-font joe-icon-arrow-downb code-expander\" title=\"折叠/展开\"></i>"
+							"<i class=\"joe-font joe-icon-arrow-downb code-expander\" title=\"摺疊/展開\"></i>"
 						)
 						.addClass("c_expander");
 					$item.find(".code-expander").on("click", function (e) {
@@ -170,24 +170,24 @@ const commonContext = {
 						$this.parent("pre").toggleClass("close");
 					});
 				}
-				// 代码复制
+				// 程式碼複製
 				if (ThemeConfig.enable_code_copy) {
 					const text = $item.find("code[class='language-none'], code[class*='language-']").text();
 					const span = $(
-						"<span class=\"copy-button\"><i class=\"joe-font joe-icon-copy\" title=\"复制代码\"></i></span>"
+						"<span class=\"copy-button\"><i class=\"joe-font joe-icon-copy\" title=\"複製程式碼\"></i></span>"
 					);
 					new ClipboardJS(span[0], {
 						// text: () => text + "\r\n\r\n" + ThemeConfig.copy_right_text,
 						text: () => text,
-					}).on("success", () => Qmsg.success("复制成功！"));
+					}).on("success", () => Qmsg.success("複製成功！"));
 					$item.addClass("c_copy").append(span);
 				}
 			}
 		});
 	},
-	/*自动折叠长代码 <仅针对文章页>*/
+	/*自動摺疊長程式碼 <僅針對文章頁>*/
 	foldCode() {
-		if (!$(".page-post").length) return; // 仅针对文章页
+		if (!$(".page-post").length) return; // 僅針對文章頁
 		if (
 			ThemeConfig.enable_code_expander &&
       ThemeConfig.enable_fold_long_code &&
@@ -200,13 +200,13 @@ const commonContext = {
 						.siblings(".toolbar")
 						.find(".toolbar-item span")
 						.eq(0);
-					$title.append("<em class=\"autofold-tip\"><已自动折叠></em>");
+					$title.append("<em class=\"autofold-tip\"><已自動摺疊></em>");
 					$item.addClass("close");
 				}
 			});
 		}
 	},
-	/* 获取页面百度收录情况 */
+	/* 獲取頁面百度收錄情況 */
 	initBaidu() {
 		if (!ThemeConfig.check_baidu_collect || !$("#joe_baidu_record").length)
 			return;
@@ -220,12 +220,12 @@ const commonContext = {
 		})
 			.then((res) => {
 				if (res.data && res.data.collected) {
-					$("#joe_baidu_record").css("color", "#67c23a").html("已收录");
+					$("#joe_baidu_record").css("color", "#67c23a").html("已收錄");
 				} else {
-					/* 如果填写了Token，则自动推送给百度 */
+					/* 如果填寫了Token，則自動推送給百度 */
 					if (ThemeConfig.baidu_token) {
 						$("#joe_baidu_record").html(
-							"<span style=\"color: #e6a23c\">未收录，推送中...</span>"
+							"<span style=\"color: #e6a23c\">未收錄，推送中...</span>"
 						);
 						let _timer = setTimeout(function () {
 							Utils.request({
@@ -241,7 +241,7 @@ const commonContext = {
 								.then((res) => {
 									if (res.data.success === 0) {
 										$("#joe_baidu_record").html(
-											"<span style=\"color: #f56c6c\">推送失败，请检查！</span>"
+											"<span style=\"color: #f56c6c\">推送失敗，請檢查！</span>"
 										);
 									} else {
 										$("#joe_baidu_record").html(
@@ -260,7 +260,7 @@ const commonContext = {
 							window.location.href
 						)}`;
 						$("#joe_baidu_record").html(
-							`<a target="_blank" href="${url}" rel="noopener noreferrer nofollow" style="color: #f56c6c">未收录，提交收录</a>`
+							`<a target="_blank" href="${url}" rel="noopener noreferrer nofollow" style="color: #f56c6c">未收錄，提交收錄</a>`
 						);
 					}
 				}
@@ -269,7 +269,7 @@ const commonContext = {
 				console.log(err);
 			});
 	},
-	/* 音乐播放器 */
+	/* 音樂播放器 */
 	initMusic() {
 		if (!ThemeConfig.enable_global_music_player) return;
 		Utils.request({
@@ -306,7 +306,7 @@ const commonContext = {
 			};
 			let htmlStr = "";
 			if (!options.src) {
-				htmlStr = "<p>pdf地址未填写！</p>";
+				htmlStr = "<p>pdf地址未填寫！</p>";
 			} else {
 				htmlStr = `
       <div class="joe_pdf">
@@ -316,7 +316,7 @@ const commonContext = {
 			$(item).replaceWith(htmlStr);
 		});
 	},
-	/* 全局返回顶 */
+	/* 全域性返回頂 */
 	back2Top() {
 		if (!ThemeConfig.enable_back2top) return;
 		const $el = $(".joe_action_item.back2top");
@@ -339,31 +339,31 @@ const commonContext = {
 			);
 		});
 	},
-	/* 激活侧边栏人生倒计时 */
+	/* 啟用側邊欄人生倒計時 */
 	initTimeCount() {
 		if (Joe.isMobile || !$(".joe_aside__item.timelife").length) return;
 		let timelife = [
 			{
-				title: "今日已经过去",
-				endTitle: "小时",
+				title: "今日已經過去",
+				endTitle: "小時",
 				num: 0,
 				percent: "0%",
 			},
 			{
-				title: "这周已经过去",
+				title: "這周已經過去",
 				endTitle: "天",
 				num: 0,
 				percent: "0%",
 			},
 			{
-				title: "本月已经过去",
+				title: "本月已經過去",
 				endTitle: "天",
 				num: 0,
 				percent: "0%",
 			},
 			{
-				title: "今年已经过去",
-				endTitle: "个月",
+				title: "今年已經過去",
+				endTitle: "個月",
 				num: 0,
 				percent: "0%",
 			},
@@ -425,7 +425,7 @@ const commonContext = {
 		});
 		$(".joe_aside__item.timelife .joe_aside__item-contain").html(htmlStr);
 	},
-	/* 激活侧边栏天气 */
+	/* 啟用側邊欄天氣 */
 	initWeather() {
 		if (
 			Joe.isMobile ||
@@ -460,9 +460,9 @@ const commonContext = {
 			"https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"
 		);
 	},
-	/* 全局图片预览（文章、日志页等） */
+	/* 全域性圖片預覽（文章、日誌頁等） */
 	initGallery() {
-		// 只对符合条件的图片开启预览功能
+		// 只對符合條件的圖片開啟預覽功能
 		const $allImgs = $(
 			".page-post .joe_detail__article img:not([class]), .page-journals .joe_journal_block img:not([class]), .page-sheet img:not([class])"
 		);
@@ -478,13 +478,13 @@ const commonContext = {
 			);
 		});
 	},
-	/* 设置页面中链接的打开方式 */
+	/* 設定頁面中連結的開啟方式 */
 	initExternalLink() {
 		let $allLink;
 
 		if (ThemeConfig.link_behavior !== "default") {
-			// 自定义行为（全局处理，不包括导航条和页脚，导航条可以在后台管理-菜单中配置）
-			$allLink = $(".joe_main_container a[href]"); // 页面中所有a标签
+			// 自定義行為（全域性處理，不包括導航條和頁尾，導航條可以在後臺管理-選單中配置）
+			$allLink = $(".joe_main_container a[href]"); // 頁面中所有a標籤
 
 			if (!$allLink.length) return;
 
@@ -505,15 +505,15 @@ const commonContext = {
 				}
 			});
 		} else {
-			// 主题默认行为（只处理了部分页面的a标签）
+			// 主題預設行為（只處理了部分頁面的a標籤）
 			$allLink = $(
 				".page-post .joe_detail__article a[href], .joe_journal_body a[href], .page-sheet .joe_detail__article a[href]"
-			); // 内容区域中所有a标签（文章/日志页）
+			); // 內容區域中所有a標籤（文章/日誌頁）
 			if (!$allLink.length) return;
 
 			$allLink.each(function () {
 				const $this = $(this);
-				// 排除内容中的锚点、排除href设置为javascript:;的情况
+				// 排除內容中的錨點、排除href設定為javascript:;的情況
 				const curHref=$this.attr("href");
 				if(!curHref.includes("javascript:;")){
 					const target = !curHref.startsWith("#") ? "_blank" : "";
@@ -525,7 +525,7 @@ const commonContext = {
 			});
 		}
 	},
-	/* 初始化3D标签云 */
+	/* 初始化3D標籤雲 */
 	init3dTag() {
 		ThemeConfig.tag_cloud_type = document.getElementById('tags-3d') ? '3d' : 'list'
 		ThemeConfig.enable_tag_cloud=document.querySelector('.joe_aside__item.tags-cloud') !== null
@@ -611,7 +611,7 @@ const commonContext = {
 			}
 		);
 	},
-	/* 搜索框弹窗 */
+	/* 搜尋框彈窗 */
 	// searchDialog() {
 	// 	const $result = $(".joe_header__above-search .result");
 	// 	$(".joe_header__above-search .input").on("click", function (e) {
@@ -622,7 +622,7 @@ const commonContext = {
 	// 		$result.removeClass("active");
 	// 	});
 	// },
-	/* 激活全局下拉框 */
+	/* 啟用全域性下拉框 */
 	initDropMenu() {
 		$(".joe_dropdown").each(function (index, item) {
 			const menu = $(this).find(".joe_dropdown__menu");
@@ -645,13 +645,13 @@ const commonContext = {
 			}
 		});
 	},
-	/* 小屏幕伸缩侧边栏 */
+	/* 小螢幕伸縮側邊欄 */
 	drawerMobile() {
 		$(".joe_header__above-slideicon").on("click", function (e) {
 			e.stopPropagation();
-			/* 关闭搜索框 */
+			/* 關閉搜尋框 */
 			$(".joe_header__searchout").removeClass("active");
-			/* 处理开启关闭状态 */
+			/* 處理開啟關閉狀態 */
 			const $html = $("html");
 			const $mask = $(".joe_header__mask");
 			const $slide_out = $(".joe_header__slideout");
@@ -660,7 +660,7 @@ const commonContext = {
 				$mask.removeClass("active slideout");
 				$slide_out.removeClass("active");
 			} else {
-				// 保存滚动位置
+				// 儲存滾動位置
 				window.sessionStorage.setItem("lastScroll", $html.scrollTop());
 				$html.addClass("disable-scroll");
 				$mask.addClass("active slideout");
@@ -668,15 +668,15 @@ const commonContext = {
 			}
 		});
 	},
-	/* 小屏幕搜索框 */
+	/* 小螢幕搜尋框 */
 	// searchMobile() {
 	// 	$(".joe_header__above-searchicon").on("click", function (e) {
 	// 		e.stopPropagation();
 	// 		SearchWidget.open();
 	//
-	// 		/* 关闭侧边栏 */
+	// 		/* 關閉側邊欄 */
 	// 		$(".joe_header__slideout").removeClass("active");
-	// 		/* 处理开启关闭状态 */
+	// 		/* 處理開啟關閉狀態 */
 	// 		const $html = $("html");
 	// 		const $mask = $(".joe_header__mask");
 	// 		const $header_above = $(".joe_header__above");
@@ -689,7 +689,7 @@ const commonContext = {
 	// 			$search_out.removeClass("active");
 	// 			$header_above.removeClass("solid");
 	// 		} else {
-	// 			// 保存滚动位置
+	// 			// 儲存滾動位置
 	// 			window.sessionStorage.setItem("lastScroll", $html.scrollTop());
 	// 			$html.addClass("disable-scroll");
 	// 			$mask.addClass("active");
@@ -698,7 +698,7 @@ const commonContext = {
 	// 		}
 	// 	});
 	// },
-	/* 点击遮罩层关闭 */
+	/* 點選遮罩層關閉 */
 	maskClose() {
 		$(".joe_header__mask")
 			.on("click", function (e) {
@@ -711,14 +711,14 @@ const commonContext = {
 				$(".joe_header__toc").removeClass("active");
 				$(".joe_header__above").removeClass("solid");
 
-				// 还原滚动位置
+				// 還原滾動位置
 				const lastScroll = window.sessionStorage.getItem("lastScroll");
 				lastScroll && $html.scrollTop(lastScroll);
 				window.sessionStorage.removeItem("lastScroll");
 			})
 			.on("touchmove", (e) => e.preventDefault);
 	},
-	/* 移动端侧边栏菜单手风琴 */
+	/* 移動端側邊欄選單手風琴 */
 	sideMenuMobile() {
 		$(".joe_header__slideout-menu .current")
 			.parents(".panel-body")
@@ -729,18 +729,18 @@ const commonContext = {
 			e.stopPropagation();
 			const $this = $(this);
 			const panelBox = $this.parent().parent();
-			/* 清除全部内容 */
+			/* 清除全部內容 */
 			panelBox.find(".panel").not($this).removeClass("in");
 			panelBox
 				.find(".panel-body")
 				.not($this.siblings(".panel-body"))
 				.stop()
 				.hide("fast");
-			/* 激活当前的内容 */
+			/* 啟用當前的內容 */
 			$this.toggleClass("in").siblings(".panel-body").stop().toggle("fast");
 		});
 	},
-	/* 头部滚动 */
+	/* 頭部滾動 */
 	initHeadScroll() {
 		if (Joe.isMobile || ThemeConfig.enable_fixed_header) return;
 		let last_scroll_position = 0;
@@ -773,24 +773,24 @@ const commonContext = {
 
 		document.addEventListener("scroll", Utils.throttle(handleHeader, 100));
 	},
-	/* 渲染最新评论中的 emoji */
+	/* 渲染最新評論中的 emoji */
 	// renderReplyEmoji() {
 	// 	const $replys = $(".aside-reply-content");
 	// 	$replys.each((_index, item) => {
-	// 		// 获取转换后的marked
+	// 		// 獲取轉換後的marked
 	// 		const markedHtml = marked(item.innerHTML)
 	// 			.replace(
 	// 				/<img\ssrc[^>]*>/gm,
 	// 				"<i class=\"joe-font joe-icon-tupian\"></i>"
 	// 			)
 	// 			.replace(/bili\//g, "bili/hd/ic_emoji_");
-	// 		// 处理其中的表情包
+	// 		// 處理其中的表情包
 	// 		const emoji = Utils.renderedEmojiHtml(markedHtml);
-	// 		// 将回车转换为br
+	// 		// 將回車轉換為br
 	// 		item.innerHTML = Utils.return2Br(emoji);
 	// 	});
 	// },
-	/* 禁用浏览器空格滚动页面 */
+	/* 禁用瀏覽器空格滾動頁面 */
 	cancelSpaceScroll() {
 		document.body.onkeydown = function (e) {
 			e = e || window.event;
@@ -812,7 +812,7 @@ const commonContext = {
 			}
 		};
 	},
-	/* 判断地址栏是否有锚点链接，有则跳转到对应位置 */
+	/* 判斷位址列是否有錨點連結，有則跳轉到對應位置 */
 	scrollToHash(hash, duration = 0) {
 		hash = hash || window.decodeURIComponent(location.hash);
 		if (!hash) return;
@@ -833,7 +833,7 @@ const commonContext = {
 			}
 		}
 	},
-	/* 加载鼠标特效 */
+	/* 載入滑鼠特效 */
 	loadMouseEffect() {
 		if (
 			Joe.isMobile ||
@@ -845,7 +845,7 @@ const commonContext = {
 			`${ThemeConfig.BASE_RES_URL}/assets/effect/cursor/${ThemeConfig.cursor_effect}.js`
 		);
 	},
-	/* 加载背景特效 */
+	/* 載入背景特效 */
 	loadBackdropEffect() {
 		if (
 			Joe.isMobile ||
@@ -857,7 +857,7 @@ const commonContext = {
 			`${ThemeConfig.BASE_RES_URL}/assets/effect/backdrop/${ThemeConfig.backdrop}.js`
 		);
 	},
-	/* 自定义favicon */
+	/* 自定義favicon */
 	setFavicon() {
 		if (!ThemeConfig.favicon) return;
 		const favicon = new Favico();
@@ -867,7 +867,7 @@ const commonContext = {
 		};
 		image.src = ThemeConfig.favicon;
 	},
-	/* 首页离屏提示 */
+	/* 首頁離屏提示 */
 	offscreenTip() {
 		if (Joe.isMobile || !ThemeConfig.enable_offscreen_tip) return;
 		const OriginTitile = document.title;
@@ -880,18 +880,18 @@ const commonContext = {
 				return;
 			if (document.hidden) {
 				document.title =
-          ThemeConfig.offscreen_title_leave || "歪，你去哪里了？";
+          ThemeConfig.offscreen_title_leave || "歪，你去哪裡了？";
 				clearTimeout(timer);
 			} else {
 				document.title =
-          ThemeConfig.offscreen_title_back || "(つェ⊂)咦，又回来了!";
+          ThemeConfig.offscreen_title_back || "(つェ⊂)咦，又回來了!";
 				timer = setTimeout(function () {
 					document.title = OriginTitile;
 				}, 2000);
 			}
 		});
 	},
-	/* 总访问量 */
+	/* 總訪問量 */
 	// initUV() {
 	// 	if (!ThemeConfig.enable_visit_number) return;
 	// 	Utils.request({
@@ -900,7 +900,7 @@ const commonContext = {
 	// 		res && $("#site-uv").text(res.visitCount || 0);
 	// 	});
 	// },
-	/* 初始化网站运行时间 */
+	/* 初始化網站執行時間 */
 	initBirthday() {
 		if (!ThemeConfig.enable_birthday) return;
 		if (
@@ -909,7 +909,7 @@ const commonContext = {
       	ThemeConfig.birthday
       )
 		) {
-			Qmsg.error("“自定义博客起始时间” 格式错误，请检查！");
+			Qmsg.error("“自定義部落格起始時間” 格式錯誤，請檢查！");
 			return;
 		}
 		const birthDay = new Date(
@@ -944,24 +944,24 @@ const commonContext = {
 		getRunTime();
 		setInterval(getRunTime, 1000);
 	},
-	/* 页面加载耗时（控制台） */
+	/* 頁面載入耗時（控制檯） */
 	showLoadTime() {
 		if (Joe.isMobile || !ThemeConfig.show_loaded_time) return;
 		const consume_time = performance.now();
 		consume_time &&
       console.log(
-      	"%c页面加载耗时：" + Math.round(consume_time) + " ms",
+      	"%c頁面載入耗時：" + Math.round(consume_time) + " ms",
       	"padding: 6px 8px;color:#fff;background:linear-gradient(270deg, #4edb21, #f15206);border-radius: 3px;"
       );
 	},
-	/* 调试模式 */
+	/* 除錯模式 */
 	debug() {
 		if (!ThemeConfig.enable_debug) return;
 		new window.VConsole();
 	},
 	/* 清理工作 */
 	clean() {
-		// 移除无用标签
+		// 移除無用標籤
 		$("#compatiable-checker").remove();
 		$("#theme-config-getter").remove();
 		$("#metas-getter").remove();

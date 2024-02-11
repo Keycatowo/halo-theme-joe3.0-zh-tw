@@ -22,7 +22,7 @@ var _self = (typeof window !== 'undefined')
 var Prism = (function (_self) {
 
 	// Private helper vars
-	var lang = /(?:^|\s)lang(?:uage)?-([\w-+]+)(?=\s|$)/i; //语言类名匹配
+	var lang = /(?:^|\s)lang(?:uage)?-([\w-+]+)(?=\s|$)/i; //語言類名匹配
 	var uniqueId = 0;
 
 	// The grammar object for plaintext
@@ -529,7 +529,7 @@ var Prism = (function (_self) {
 			_.hooks.run('before-all-elements-highlight', env);
 
 			for (var i = 0, element; (element = env.elements[i++]);) {
-        // 支持自定义标题
+        // 支援自定義標題
         element.className.match(/(.+)\|(.+)/);
         if(RegExp.$2) {
           element.setAttribute('data-title', RegExp.$2);
@@ -7568,7 +7568,7 @@ Prism.languages.wasm = {
 		}
 
     var language = '';
-    // 优先使用自定义标题，没有则显示语言
+    // 優先使用自定義標題，沒有則顯示語言
     var codeHasTitle = pre.querySelector('code[data-title]');
     if(codeHasTitle) {
       language = codeHasTitle.getAttribute('data-title') || '';
@@ -7682,9 +7682,9 @@ Prism.languages.wasm = {
 	function getSettings(startElement) {
 		/** @type {Settings} */
 		var settings = {
-			'copy': '复制',
-			'copy-error': '按 Ctrl+C 复制',
-			'copy-success': '复制成功!',
+			'copy': '複製',
+			'copy-error': '按 Ctrl+C 複製',
+			'copy-success': '複製成功!',
 			'copy-timeout': 3000
 		};
 

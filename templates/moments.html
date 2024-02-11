@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{modules/layout :: html(title = ${theme.config.journals.journals_title ?: '我的动态'}+'-'+${site.title},htmlType = journals,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
+      th:replace="~{modules/layout :: html(title = ${theme.config.journals.journals_title ?: '我的動態'}+'-'+${site.title},htmlType = journals,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
 >
 <th:block th:fragment="content">
 
@@ -11,7 +11,7 @@
          th:classappend="|${theme.config.theme.enable_show_in_up ? 'animated showInUp':''} ${theme.config.aside.aside_position == 'left' ? 'revert':''}|">
       <div class="joe_main">
         <div class="joe_detail">
-          <h1 class="joe_detail__title txt-shadow">[[${theme.config.journals.journals_title ?: '我的动态'}]]</h1>
+          <h1 class="joe_detail__title txt-shadow">[[${theme.config.journals.journals_title ?: '我的動態'}]]</h1>
           <th:block th:if="${theme.config.journals.enable_journal_add}">
           <a class="joe_journal_add" th:href="@{/console/moments}" target="_blank" rel="nofollow"><i class="joe-font joe-icon-edit"></i></a>
           </th:block>
@@ -21,13 +21,13 @@
             <div class="meta">
               <div class="author">
                 <a class="link" th:href="${site.url}" th:title="${theme.config.blogger.nickname ?: site.title}">[[${theme.config.blogger.nickname ?: site.title}]]</a>
-                <!-- 修改链接指向博客地址 title 和 显示为博主名/博客名 -->
+                <!-- 修改連結指向部落格地址 title 和 顯示為博主名/部落格名 -->
               </div>
               <div class="item">
-                <span class="text">[[${theme.config.blogger.motto?:'一句话介绍自己吧！'}]]</span>
+                <span class="text">[[${theme.config.blogger.motto?:'一句話介紹自己吧！'}]]</span>
                 <th:block th:if="${theme.config.other.check_baidu_collect}">
                 <span class="line">/</span>
-                  <span class="text" id="joe_baidu_record">正在检测是否收录...</span>
+                  <span class="text" id="joe_baidu_record">正在檢測是否收錄...</span>
                 </th:block>
             </div>
           </div>
@@ -74,11 +74,11 @@
                   </th:block>
                   <th:block th:if="${theme.config.basic.comment_option == 'default'} or ${#strings.trim(theme.config.basic.waline.waline_serverURL) ==''}">
                   <th:block th:if="${moment.stats.totalComment gt 0}">
-              <span class="joe_journal_operate_item journal_comment_expander"><em class="journal_comment_expander_txt">查看评论</em><i class="joe-font joe-icon-arrow-downb"></i></span>
+              <span class="joe_journal_operate_item journal_comment_expander"><em class="journal_comment_expander_txt">檢視評論</em><i class="joe-font joe-icon-arrow-downb"></i></span>
                   </th:block>
                   </th:block>
                   <th:block th:if="${theme.config.basic.comment_option == 'waline'} and ${#strings.trim(theme.config.basic.waline.waline_serverURL) !=''}">
-                    <span class="joe_journal_operate_item journal_comment_expander" th:id="'waline-journal_comment_expander-'+${moment.metadata.name}" style="display: none"><em class="journal_comment_expander_txt">查看评论</em><i class="joe-font joe-icon-arrow-downb"></i></span>
+                    <span class="joe_journal_operate_item journal_comment_expander" th:id="'waline-journal_comment_expander-'+${moment.metadata.name}" style="display: none"><em class="journal_comment_expander_txt">檢視評論</em><i class="joe-font joe-icon-arrow-downb"></i></span>
                   </th:block>
 
                   </th:block>

@@ -24,60 +24,60 @@
 
     <th:block th:if="${theme.config.footer.driven_by != null} and ${theme.config.footer.driven_by != 'none'}">
       <th:block th:if="${theme.config.footer.driven_by == 'aliyun'}">
-    <p class="site_driven">本站点由
+    <p class="site_driven">本站點由
       <a href="https://www.aliyun.com" target="_blank" rel="noopener noreferrer nofollow">
-      <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-      </a>提供云服务
+      <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+      </a>提供雲服務
     </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'tencent'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://cloud.tencent.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'baidu'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://cloud.baidu.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'upyun'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://www.upyun.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'qiniu'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://www.qiniu.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'huawei'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://www.huaweicloud.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
       <th:block th:if="${theme.config.footer.driven_by == 'jinshan'}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a href="https://www.ksyun.com" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="@{/assets/img/cloud}+'/'+${theme.config.footer.driven_by}+'.svg'"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
 
       <th:block th:if="${theme.config.footer.driven_by == 'custom'} and ${theme.config.footer.driven_by_custom_img != ''}">
-        <p class="site_driven">本站点由
+        <p class="site_driven">本站點由
           <a th:href="${theme.config.footer.driven_by_custom_url}" target="_blank" rel="noopener noreferrer nofollow">
-            <img th:class="${theme.config.footer.driven_by}" th:src="${theme.config.footer.driven_by_custom_img}"  alt="云服务商"/>
-          </a>提供云服务
+            <img th:class="${theme.config.footer.driven_by}" th:src="${theme.config.footer.driven_by_custom_img}"  alt="雲服務商"/>
+          </a>提供雲服務
         </p>
       </th:block>
 
@@ -85,7 +85,7 @@
     </th:block>
   <th:block th:if="${theme.config.footer.enable_birthday}">
   <div class="site_life">
-    <i class="joe-font joe-icon-jiasu"></i>已运行&nbsp;<strong class="joe_run__day">00</strong> 天 <strong class="joe_run__hour">00</strong> 时 <strong class="joe_run__minute">00</strong> 分 <strong class="joe_run__second">00</strong> 秒
+    <i class="joe-font joe-icon-jiasu"></i>已執行&nbsp;<strong class="joe_run__day">00</strong> 天 <strong class="joe_run__hour">00</strong> 時 <strong class="joe_run__minute">00</strong> 分 <strong class="joe_run__second">00</strong> 秒
   </div>
   </th:block>
 <th:block th:if="${theme.config.footer.enable_police} and ${#strings.trim(theme.config.basic.icp_police.police) != ''} and ${theme.config.basic.icp_police.police != null}">
@@ -103,15 +103,15 @@
     <a class="rss" th:href="@{/rss.xml}" target="_blank" rel="noopener noreferrer"><i class="joe-font joe-icon-rss-fill"></i>&nbsp;RSS</a>
     </th:block>
     <th:block th:if="${theme.config.footer.enable_rss}">
-      <a th:href="@{/sitemap.xml}" target="_blank" rel="noopener noreferrer">站点地图</a>
+      <a th:href="@{/sitemap.xml}" target="_blank" rel="noopener noreferrer">站點地圖</a>
     </th:block>
 </div>
 </th:block>
 <th:block th:if="${theme.config.footer.enable_busuanzi}">
 <div class="item busuanzi-statistic">
-  <span class="site-pv"><i class="joe-font joe-icon-zhexiantu"></i>访问量<em id="busuanzi_value_site_pv">0</em></span>
-  <span class="site-uv"><i class="joe-font joe-icon-monitor"></i>访客量<em id="busuanzi_value_site_uv">0</em></span>
-  <span class="site-page-pv"><i class="joe-font joe-icon-dianji"></i>本页访客<em id="busuanzi_value_page_pv">0</em></span>
+  <span class="site-pv"><i class="joe-font joe-icon-zhexiantu"></i>訪問量<em id="busuanzi_value_site_pv">0</em></span>
+  <span class="site-uv"><i class="joe-font joe-icon-monitor"></i>訪客量<em id="busuanzi_value_site_uv">0</em></span>
+  <span class="site-page-pv"><i class="joe-font joe-icon-dianji"></i>本頁訪客<em id="busuanzi_value_page_pv">0</em></span>
 </div>
 </th:block>
 </div>

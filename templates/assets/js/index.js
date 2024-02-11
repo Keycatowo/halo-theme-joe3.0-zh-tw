@@ -1,6 +1,6 @@
-/**首页逻辑 */
+/**首頁邏輯 */
 const homeContext = {
-	/* 初始化轮播图 */
+	/* 初始化輪播圖 */
 	initSwiper() {
 		if (
 			ThemeConfig.enable_banner &&
@@ -8,9 +8,9 @@ const homeContext = {
 		) {
 
 			new Swiper('.swiper', {
-				direction: ThemeConfig.banner_direction, // 垂直切换选项
-				loop: ThemeConfig.enable_banner_loop, // 循环模式选项
-				effect: ThemeConfig.banner_effect,//Slide的切换效果
+				direction: ThemeConfig.banner_direction, // 垂直切換選項
+				loop: ThemeConfig.enable_banner_loop, // 迴圈模式選項
+				effect: ThemeConfig.banner_effect,//Slide的切換效果
 				keyboard: false,
 				speed: ThemeConfig.banner_speed,
 				mousewheel: false,
@@ -23,12 +23,12 @@ const homeContext = {
 					}
 					: false,
 				observer: true,
-				// 如果需要分页器
+				// 如果需要分頁器
 				pagination: {
 					el: '.swiper-pagination',
 				},
 
-				// 如果需要前进后退按钮
+				// 如果需要前進後退按鈕
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
@@ -37,9 +37,9 @@ const homeContext = {
 			});
 		}
 	},
-	// /* 获取文章封面 */
+	// /* 獲取文章封面 */
 	// getThumbnail(post) {
-	// 	// 取值逻辑（文章封面 > 分类封面 > 标签封面 > 随机图(若开启) > 默认封面）
+	// 	// 取值邏輯（文章封面 > 分類封面 > 標籤封面 > 隨機圖(若開啟) > 預設封面）
 	// 	let thumbnail = post.thumbnail || "";
 	// 	if (!thumbnail) {
 	// 		if (post.categories.length) {
@@ -67,9 +67,9 @@ const homeContext = {
 	// 	}
 	// 	return thumbnail;
 	// },
-	// /* 获取默认封面 */
+	// /* 獲取預設封面 */
 	// getDefaultThumbnail(postId) {
-	// 	// 如果配置了随机图，则从随机图获取
+	// 	// 如果配置了隨機圖，則從隨機圖獲取
 	// 	if (
 	// 		ThemeConfig.enable_random_img_api &&
     //   ThemeConfig.random_img_api.trim()
@@ -81,7 +81,7 @@ const homeContext = {
 	// 		return ThemeConfig.post_thumbnail;
 	// 	}
 	// },
-	/* 初始化首页列表 */
+	/* 初始化首頁列表 */
 // 	initList() {
 // 		if (!ThemeConfig.enable_index_list_ajax) return;
 // 		const MapTypes = {
@@ -107,14 +107,14 @@ const homeContext = {
 // 			page: 0,
 // 			size: pageSize,
 // 			keyword: "",
-// 			sort: "topPriority,createTime,desc", // 默认为置顶优先+创建时间+倒序
+// 			sort: "topPriority,createTime,desc", // 預設為置頂優先+建立時間+倒序
 // 		};
 //
 // 		// 初始化Dom
 // 		const initDom = async (sort) => {
 // 			$domList.html("").show();
 // 			$domEmpty.addClass("hide");
-// 			$domLoad.removeAttr("loading").html("查看更多").show();
+// 			$domLoad.removeAttr("loading").html("檢視更多").show();
 // 			const activeItem = $(`.passage-list-tabs .item[data-type="${sort}"]`);
 // 			const activeLine = $(".passage-list-tabs .line");
 // 			activeItem.addClass("active").siblings().removeClass("active");
@@ -124,9 +124,9 @@ const homeContext = {
 // 			});
 // 		};
 //
-// 		// 获取数据
+// 		// 獲取資料
 // 		const getDate = async () => {
-// 			$domLoad.attr("loading", true).html("加载中...");
+// 			$domLoad.attr("loading", true).html("載入中...");
 // 			$domLoading.show();
 // 			await Utils.sleep(200);
 //
@@ -150,11 +150,11 @@ const homeContext = {
 // 							);
 // 							if (res.isLast) {
 // 								$domLoad.hide();
-// 								// return Qmsg.warning("没有更多内容了");
+// 								// return Qmsg.warning("沒有更多內容了");
 // 							}
 // 						}
 // 						$domLoading.hide();
-// 						$domLoad.removeAttr("loading").html("查看更多");
+// 						$domLoad.removeAttr("loading").html("檢視更多");
 // 						reslove(resD.length ? resD.length - 1 : 0);
 // 					})
 // 					.catch((err) => {
@@ -163,13 +163,13 @@ const homeContext = {
 // 							$domEmpty.removeClass("hide");
 // 						}
 // 						$domLoading.hide();
-// 						$domLoad.removeAttr("loading").html("查看更多");
+// 						$domLoad.removeAttr("loading").html("檢視更多");
 // 						reject(err);
 // 					});
 // 			});
 // 		};
 //
-// 		// 渲染Dom节点
+// 		// 渲染Dom節點
 // 		const getListNode = (post, index) => {
 // 			const thumbnail = homeContext.getThumbnail(post);
 // 			const link_behavior =
@@ -203,7 +203,7 @@ const homeContext = {
 // }" target="${link_behavior}" rel="noopener noreferrer">
 //                   ${
 // 	post.topped
-// 		? "<span class=\"badge\" style=\"display: inline-block\">置顶</span>"
+// 		? "<span class=\"badge\" style=\"display: inline-block\">置頂</span>"
 // 		: ""
 // }${post.title}</a>
 //             <a class="abstract" href="${
@@ -242,7 +242,7 @@ const homeContext = {
 //     </li>`;
 // 		};
 //
-// 		// 切换文章类型
+// 		// 切換文章型別
 // 		$navItems.on("click", function (e) {
 // 			e.stopPropagation();
 // 			if (!ThemeConfig.enable_index_list_ajax) return;
@@ -258,7 +258,7 @@ const homeContext = {
 // 			getDate();
 // 		});
 //
-// 		// 加载更多
+// 		// 載入更多
 // 		$domLoad.on("click", async function (e) {
 // 			e.stopPropagation();
 // 			if ($(this).attr("loading")) return;
@@ -266,7 +266,7 @@ const homeContext = {
 // 			queryData.page++;
 // 			await getDate();
 //
-// 			// 向下滚动一段距离
+// 			// 向下滾動一段距離
 // 			await Utils.sleep(300);
 // 			const scrollTop = lastItemTop - $headerHeight;
 // 			$("html,body").animate(
@@ -283,7 +283,7 @@ const homeContext = {
 		if (!ThemeConfig.enable_index_list_ajax){
 			return
 		}
-		// 在页面加载完成后执行
+		// 在頁面載入完成後執行
 		const $headerHeight =
 			ThemeConfig.enable_fixed_header || Joe.isMobile
 				? $(".joe_header").height()
@@ -295,7 +295,7 @@ const homeContext = {
 				const $domLoad = $(".joe_load");
 				this.domNext = $domLoad.attr('data-next');
 				// console.log(this.domNext)
-				$domLoad.html("加载中...").attr("loading", "true");
+				$domLoad.html("載入中...").attr("loading", "true");
 				fetch(this.domNext, {
 					method: "GET",
 				})
@@ -320,7 +320,7 @@ const homeContext = {
 						} else {
 							$domLoadContainer.remove();
 						}
-						// 向下滚动一段距离
+						// 向下滾動一段距離
 						// const lastItemTop = postListElement.querySelector(".joe_list__item:last-child").offsetTop;
 						// console.log(postListElement.querySelector(".joe_list__item:last-child"))
 						// console.log($headerHeight)
@@ -340,11 +340,11 @@ const homeContext = {
 			});
 		});
 	},
-	// 加载更多文章的函数
+	// 載入更多文章的函式
 	// loadMoreArticles() {
-	// 	// 进行加载前的一些UI交互，例如显示加载指示器
+	// 	// 進行載入前的一些UI互動，例如顯示載入指示器
 	//
-	// 	// 发送Ajax请求获取新的文章内容
+	// 	// 傳送Ajax請求獲取新的文章內容
 	// 	fetch(this.domNext, {
 	// 		method: "GET",
 	// 	})
@@ -365,7 +365,7 @@ const homeContext = {
 	// 			console.error(error);
 	// 		})
 	// 		.finally(() => {
-	// 			// 加载完成后的一些UI交互，例如隐藏加载指示器
+	// 			// 載入完成後的一些UI互動，例如隱藏載入指示器
 	// 		});
 	// },
 
@@ -387,7 +387,7 @@ const homeContext = {
 			});
 		});
 	},
-/* 激活列表特效 */
+/* 啟用列表特效 */
 	initListEffect() {
 		if (!ThemeConfig.enable_index_list_effect) return;
 		new WOW({

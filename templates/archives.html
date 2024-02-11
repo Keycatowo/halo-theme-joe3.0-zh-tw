@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{modules/layout :: html(title = ${theme.config.archives.archives_title ?: '文章归档'}+'-'+${site.title},htmlType = archives,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
+      th:replace="~{modules/layout :: html(title = ${theme.config.archives.archives_title ?: '文章歸檔'}+'-'+${site.title},htmlType = archives,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
 >
   <th:block th:fragment="content">
     <body>
     <div id="Joe">
       <th:block th:replace="~{modules/macro/navbar :: navbar}" />
-      <!--          首页大图-->
+      <!--          首頁大圖-->
       <th:block th:if="${theme.config.beauty.enable_big_banner}">
         <th:block th:replace="~{modules/macro/big_banner :: big_banner(${title})}" />
       </th:block>
@@ -14,11 +14,11 @@
            th:classappend="|${theme.config.theme.enable_show_in_up ?'animated showInUp':''} ${theme.config.aside.aside_position == 'left' ? 'revert':''}|">
         <div class="joe_main">
           <div class="joe_index joe_archives__filing">
-            <div class="title">[[${theme.config.archives.archives_title ?: '文章归档'}]]</div>
+            <div class="title">[[${theme.config.archives.archives_title ?: '文章歸檔'}]]</div>
             <div class="content">
               <th:block th:if="${theme.config.archives.enable_archives_category}">
               <div class="joe_archives__category animated fadeIn">
-                <div class="joe_archives-title"><i class="joe-font joe-icon-fenlei"></i>分类</div>
+                <div class="joe_archives-title"><i class="joe-font joe-icon-fenlei"></i>分類</div>
                 <ul class="joe_category-list" th:with="categories = ${categoryFinder.listAll()}">
                   <li class="item" th:each="category : ${categories}">
                     <a class="link" th:href="@{${category.status.permalink}}" th:title="${category.spec.displayName}"><span th:title="${category.spec.displayName}">[[${category.spec.displayName}]]</span><em>[[${category.status.postCount}]]</em></a>
@@ -29,7 +29,7 @@
     <div class="joe_archives__wrapper animated fadeIn">
       <div class="joe_archives-title">
         <th:block th:if="${theme.config.archives.archives_list_type == 'timeline'}">
-        <i class="joe-font joe-icon-timeline"></i>时间轴<em>（[[${theme.config.archives.archives_timeline_metric == 'month' ? '月':'年'}]]）</em>
+        <i class="joe-font joe-icon-timeline"></i>時間軸<em>（[[${theme.config.archives.archives_timeline_metric == 'month' ? '月':'年'}]]）</em>
         </th:block>
         <th:block th:if="${theme.config.archives.archives_list_type == 'list'}">
         <i class="jiewen joe-icon-riqi"></i>列表

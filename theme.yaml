@@ -7,7 +7,7 @@ spec:
   author:
     name: Jiewenhuang
     website: "https://halo.run"
-  description: Halo2.0主题 Joe3
+  description: Halo2.0主題 Joe3
   logo: "https://wmimg.com/i/70/2023/08/64d3c41d5bde2.webp"
   website: "https://www.jiewen.run"
   repo: "https://github.com/jiewenhuang/halo-theme-joe3.0"
@@ -21,7 +21,7 @@ spec:
         description: 留言板文章
         screenshot:
         file: page_leaving.html
-      - name: 友链
-        description: 友链模板
+      - name: 友鏈
+        description: 友鏈模板
         screenshot:
         file: page_links.html

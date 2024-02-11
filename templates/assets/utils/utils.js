@@ -1,5 +1,5 @@
 /**
- * 主题所用工具类
+ * 主題所用工具類
  */
 class Emoji {
 	constructor(name, description, category, style) {
@@ -16,9 +16,9 @@ const hahaEmoji = [
 	new Emoji("heng", "哼", "haha"),
 	new Emoji("guzhang", "鼓掌", "haha"),
 	new Emoji("haha", "哈哈", "haha"),
-	new Emoji("aini", "爱你", "haha"),
+	new Emoji("aini", "愛你", "haha"),
 	new Emoji("bazhang", "巴掌", "haha"),
-	new Emoji("beishang", "悲伤", "haha"),
+	new Emoji("beishang", "悲傷", "haha"),
 	new Emoji("han", "汗", "haha"),
 	new Emoji("deyi", "得意", "haha"),
 	new Emoji("ok", "ok", "haha"),
@@ -26,61 +26,61 @@ const hahaEmoji = [
 	new Emoji("wabikong", "挖鼻孔", "haha"),
 	new Emoji("weiqu", "委屈", "haha"),
 	new Emoji("weixiao", "微笑", "haha"),
-	new Emoji("huaixiao", "坏笑", "haha"),
+	new Emoji("huaixiao", "壞笑", "haha"),
 	new Emoji("woshou", "握手", "haha"),
-	new Emoji("wulian", "捂脸", "haha"),
-	new Emoji("xiaku", "吓哭", "haha"),
+	new Emoji("wulian", "捂臉", "haha"),
+	new Emoji("xiaku", "嚇哭", "haha"),
 	new Emoji("xiaoku", "笑哭", "haha"),
 	new Emoji("xixi", "嘻嘻", "haha"),
-	new Emoji("qinqin", "亲亲", "haha"),
+	new Emoji("qinqin", "親親", "haha"),
 	new Emoji("qiwang", "期望", "haha"),
-	new Emoji("chanzui", "馋嘴", "haha"),
+	new Emoji("chanzui", "饞嘴", "haha"),
 	new Emoji("huaxin", "花心", "haha"),
 	new Emoji("hufen", "互粉", "haha"),
-	new Emoji("keai", "可爱", "haha"),
-	new Emoji("kelian", "可怜", "haha"),
-	new Emoji("bishi", "鄙视", "haha"),
-	new Emoji("bizui", "闭嘴", "haha"),
+	new Emoji("keai", "可愛", "haha"),
+	new Emoji("kelian", "可憐", "haha"),
+	new Emoji("bishi", "鄙視", "haha"),
+	new Emoji("bizui", "閉嘴", "haha"),
 	new Emoji("yep", "耶", "haha"),
-	new Emoji("zan", "赞", "haha"),
+	new Emoji("zan", "贊", "haha"),
 	new Emoji("yihuo", "疑惑", "haha"),
-	new Emoji("yinxiao", "阴笑", "haha"),
-	new Emoji("yiwen", "疑问", "haha"),
-	new Emoji("bujiandan", "不简单", "haha"),
+	new Emoji("yinxiao", "陰笑", "haha"),
+	new Emoji("yiwen", "疑問", "haha"),
+	new Emoji("bujiandan", "不簡單", "haha"),
 	new Emoji("bye", "拜拜", "haha"),
 	new Emoji("chigua", "吃瓜", "haha"),
-	new Emoji("chijing", "吃惊", "haha"),
-	new Emoji("chuitou", "锤头", "haha"),
+	new Emoji("chijing", "吃驚", "haha"),
+	new Emoji("chuitou", "錘頭", "haha"),
 	new Emoji("dahaqian", "打哈欠", "haha"),
-	new Emoji("fahuo", "发火", "haha"),
+	new Emoji("fahuo", "發火", "haha"),
 	new Emoji("bang", "棒", "haha"),
 	new Emoji("gou", "狗", "haha"),
-	new Emoji("guolai", "过来", "haha"),
+	new Emoji("guolai", "過來", "haha"),
 	new Emoji("haixiu", "害羞", "haha"),
 	new Emoji("hashiiqi", "哈士奇", "haha"),
-	new Emoji("heixian", "黑线", "haha"),
+	new Emoji("heixian", "黑線", "haha"),
 	new Emoji("kouzhao", "口罩", "haha"),
-	new Emoji("kulou", "骷髅", "haha"),
+	new Emoji("kulou", "骷髏", "haha"),
 	new Emoji("kun", "困", "haha"),
-	new Emoji("landelini", "懒得理你", "haha"),
-	new Emoji("mao", "猫", "haha"),
-	new Emoji("outu", "呕吐", "haha"),
-	new Emoji("qian", "钱", "haha"),
-	new Emoji("quantou", "拳头", "haha"),
-	new Emoji("shaoerbuyi", "少儿不宜", "haha"),
+	new Emoji("landelini", "懶得理你", "haha"),
+	new Emoji("mao", "貓", "haha"),
+	new Emoji("outu", "嘔吐", "haha"),
+	new Emoji("qian", "錢", "haha"),
+	new Emoji("quantou", "拳頭", "haha"),
+	new Emoji("shaoerbuyi", "少兒不宜", "haha"),
 	new Emoji("shayan", "傻眼", "haha"),
 	new Emoji("shengbing", "生病", "haha"),
-	new Emoji("tushetou", "吐舌头", "haha"),
-	new Emoji("shuijiao", "睡觉", "haha"),
+	new Emoji("tushetou", "吐舌頭", "haha"),
+	new Emoji("shuijiao", "睡覺", "haha"),
 	new Emoji("sikao", "思考", "haha"),
 	new Emoji("shiwang", "失望", "haha"),
-	new Emoji("taikaixin", "太开心", "haha"),
-	new Emoji("tear", "流泪", "haha"),
+	new Emoji("taikaixin", "太開心", "haha"),
+	new Emoji("tear", "流淚", "haha"),
 	new Emoji("tianping", "舔屏", "haha"),
-	new Emoji("xu", "嘘", "haha"),
+	new Emoji("xu", "噓", "haha"),
 	new Emoji("youhengheng", "右哼哼", "haha"),
-	new Emoji("yun", "晕", "haha"),
-	new Emoji("zhouma", "咒骂", "haha"),
+	new Emoji("yun", "暈", "haha"),
+	new Emoji("zhouma", "咒罵", "haha"),
 	new Emoji("zhuakuang", "抓狂", "haha"),
 	new Emoji("zuohengheng", "左哼哼", "haha"),
 	new Emoji("zuoyi", "作揖", "haha"),
@@ -93,19 +93,19 @@ const bilibiliEmoji = [
 		transform: "translateY(-1408px)",
 		height: "1440px",
 	}),
-	new Emoji("fadai", "发呆", "bilibili", {
+	new Emoji("fadai", "發呆", "bilibili", {
 		"animation-duration": "1080ms",
 		"animation-timing-function": "steps(27)",
 		transform: "translateY(-832px)",
 		height: "864px",
 	}),
-	new Emoji("koubi", "抠鼻", "bilibili", {
+	new Emoji("koubi", "摳鼻", "bilibili", {
 		"animation-duration": "1200ms",
 		"animation-timing-function": "steps(30)",
 		transform: "translateY(-928px)",
 		height: "960px",
 	}),
-	new Emoji("qinqin", "亲亲", "bilibili", {
+	new Emoji("qinqin", "親親", "bilibili", {
 		"animation-duration": "280ms",
 		"animation-timing-function": "steps(7)",
 		transform: "translateY(-192px)",
@@ -117,13 +117,13 @@ const bilibiliEmoji = [
 		transform: "translateY(-608px)",
 		height: "640px",
 	}),
-	new Emoji("bishi", "鄙视", "bilibili", {
+	new Emoji("bishi", "鄙視", "bilibili", {
 		"animation-duration": "360ms",
 		"animation-timing-function": "steps(9)",
 		transform: "translateY(-256px)",
 		height: "288px",
 	}),
-	new Emoji("fanu", "发怒", "bilibili", {
+	new Emoji("fanu", "發怒", "bilibili", {
 		"animation-duration": "1320ms",
 		"animation-timing-function": "steps(33)",
 		transform: "translateY(-1024px)",
@@ -147,13 +147,13 @@ const bilibiliEmoji = [
 		transform: "translateY(-608px)",
 		height: "640px",
 	}),
-	new Emoji("bizui", "闭嘴", "bilibili", {
+	new Emoji("bizui", "閉嘴", "bilibili", {
 		"animation-duration": "1240ms",
 		"animation-timing-function": "steps(31)",
 		transform: "translateY(-960px)",
 		height: "992px",
 	}),
-	new Emoji("ganga", "尴尬", "bilibili", {
+	new Emoji("ganga", "尷尬", "bilibili", {
 		"animation-duration": "1520ms",
 		"animation-timing-function": "steps(38)",
 		transform: "translateY(-1184px)",
@@ -171,19 +171,19 @@ const bilibiliEmoji = [
 		transform: "translateY(-1088px)",
 		height: "1120px",
 	}),
-	new Emoji("wunai", "无奈", "bilibili", {
+	new Emoji("wunai", "無奈", "bilibili", {
 		"animation-duration": "920ms",
 		"animation-timing-function": "steps(23)",
 		transform: "translateY(-704px)",
 		height: "736px",
 	}),
-	new Emoji("chan", "馋", "bilibili", {
+	new Emoji("chan", "饞", "bilibili", {
 		"animation-duration": "1600ms",
 		"animation-timing-function": "steps(40)",
 		transform: "translateY(-1248px)",
 		height: "1280px",
 	}),
-	new Emoji("guilian", "鬼脸", "bilibili", {
+	new Emoji("guilian", "鬼臉", "bilibili", {
 		"animation-duration": "40ms",
 		"animation-timing-function": "steps(1)",
 		transform: "translateY(-0px)",
@@ -195,7 +195,7 @@ const bilibiliEmoji = [
 		transform: "translateY(-1088px)",
 		height: "1120px",
 	}),
-	new Emoji("shengqi", "生气", "bilibili", {
+	new Emoji("shengqi", "生氣", "bilibili", {
 		"animation-duration": "440ms",
 		"animation-timing-function": "steps(11)",
 		transform: "translateY(-320px)",
@@ -225,7 +225,7 @@ const bilibiliEmoji = [
 		transform: "translateY(-832px)",
 		height: "864px",
 	}),
-	new Emoji("shuizhao", "睡着", "bilibili", {
+	new Emoji("shuizhao", "睡著", "bilibili", {
 		"animation-duration": "960ms",
 		"animation-timing-function": "steps(24)",
 		transform: "translateY(-736px)",
@@ -249,7 +249,7 @@ const bilibiliEmoji = [
 		transform: "translateY(-960px))",
 		height: "992px",
 	}),
-	new Emoji("liulei", "流泪", "bilibili", {
+	new Emoji("liulei", "流淚", "bilibili", {
 		"animation-duration": "40ms",
 		"animation-timing-function": "steps(1)",
 		transform: "translateY(-0px)",
@@ -261,49 +261,49 @@ const bilibiliEmoji = [
 		transform: "translateY(-1120px)",
 		height: "1152px",
 	}),
-	new Emoji("yiwen", "疑问", "bilibili", {
+	new Emoji("yiwen", "疑問", "bilibili", {
 		"animation-duration": "840ms",
 		"animation-timing-function": "steps(21)",
 		transform: "translateY(-640px)",
 		height: "672px",
 	}),
-	new Emoji("dalian", "打脸", "bilibili", {
+	new Emoji("dalian", "打臉", "bilibili", {
 		"animation-duration": "1480ms",
 		"animation-timing-function": "steps(37)",
 		transform: "translateY(-1152px)",
 		height: "1184px",
 	}),
-	new Emoji("heirenwenhao", "黑人问号", "bilibili", {
+	new Emoji("heirenwenhao", "黑人問號", "bilibili", {
 		"animation-duration": "1040ms",
 		"animation-timing-function": "steps(26)",
 		transform: "translateY(-800px)",
 		height: "832px",
 	}),
-	new Emoji("miantian", "腼腆", "bilibili", {
+	new Emoji("miantian", "靦腆", "bilibili", {
 		"animation-duration": "1120ms",
 		"animation-timing-function": "steps(28)",
 		transform: "translateY(-864px)",
 		height: "896px",
 	}),
-	new Emoji("tiaokan", "调侃", "bilibili", {
+	new Emoji("tiaokan", "調侃", "bilibili", {
 		"animation-duration": "40ms",
 		"animation-timing-function": "steps(1)",
 		transform: "translateY(-0px)",
 		height: "32px",
 	}),
-	new Emoji("yun", "晕", "bilibili", {
+	new Emoji("yun", "暈", "bilibili", {
 		"animation-duration": "480ms",
 		"animation-timing-function": "steps(12)",
 		transform: "translateY(-352px)",
 		height: "384px",
 	}),
-	new Emoji("dianzan", "点赞", "bilibili", {
+	new Emoji("dianzan", "點贊", "bilibili", {
 		"animation-duration": "800ms",
 		"animation-timing-function": "steps(20)",
 		transform: "translateY(-608px)",
 		height: "640px",
 	}),
-	new Emoji("huaixiao", "坏笑", "bilibili", {
+	new Emoji("huaixiao", "壞笑", "bilibili", {
 		"animation-duration": "1240ms",
 		"animation-timing-function": "steps(31)",
 		transform: "translateY(-960px)",
@@ -315,31 +315,31 @@ const bilibiliEmoji = [
 		transform: "translateY(-0px)",
 		height: "32px",
 	}),
-	new Emoji("tiaopi", "调皮", "bilibili", {
+	new Emoji("tiaopi", "調皮", "bilibili", {
 		"animation-duration": "2000ms",
 		"animation-timing-function": "steps(50)",
 		transform: "translateY(-1568px)",
 		height: "1600px",
 	}),
-	new Emoji("zaijian", "再见", "bilibili", {
+	new Emoji("zaijian", "再見", "bilibili", {
 		"animation-duration": "960ms",
 		"animation-timing-function": "steps(24)",
 		transform: "translateY(-736px)",
 		height: "768px",
 	}),
-	new Emoji("doge", "狗头", "bilibili", {
+	new Emoji("doge", "狗頭", "bilibili", {
 		"animation-duration": "800ms",
 		"animation-timing-function": "steps(20)",
 		transform: "translateY(-608px)",
 		height: "640px",
 	}),
-	new Emoji("jingxia", "惊吓", "bilibili", {
+	new Emoji("jingxia", "驚嚇", "bilibili", {
 		"animation-duration": "1280ms",
 		"animation-timing-function": "steps(32)",
 		transform: "translateY(-992px)",
 		height: "1024px",
 	}),
-	new Emoji("nanguo", "难过", "bilibili", {
+	new Emoji("nanguo", "難過", "bilibili", {
 		"animation-duration": "1120ms",
 		"animation-timing-function": "steps(28)",
 		transform: "translateY(-864px)",
@@ -351,25 +351,25 @@ const bilibiliEmoji = [
 		transform: "translateY(-160px)",
 		height: "192px",
 	}),
-	new Emoji("zhoumei", "皱眉", "bilibili", {
+	new Emoji("zhoumei", "皺眉", "bilibili", {
 		"animation-duration": "40ms",
 		"animation-timing-function": "steps(1)",
 		transform: "translateY(-0px)",
 		height: "32px",
 	}),
-	new Emoji("facai", "发财", "bilibili", {
+	new Emoji("facai", "發財", "bilibili", {
 		"animation-duration": "1200ms",
 		"animation-timing-function": "steps(30)",
 		transform: "translateY(-928px)",
 		height: "960px",
 	}),
-	new Emoji("keai", "可爱", "bilibili", {
+	new Emoji("keai", "可愛", "bilibili", {
 		"animation-duration": "680ms",
 		"animation-timing-function": "steps(17)",
 		transform: "translateY(-512px)",
 		height: "544px",
 	}),
-	new Emoji("outu", "呕吐", "bilibili", {
+	new Emoji("outu", "嘔吐", "bilibili", {
 		"animation-duration": "1680ms",
 		"animation-timing-function": "steps(42)",
 		transform: "translateY(-1312px)",
@@ -391,20 +391,20 @@ const bilibiliEmoji = [
 
 const tiebaEmoji = [
 	new Emoji("tongue", "吐舌", "tieba"),
-	new Emoji("theblackline", "尴尬", "tieba"),
+	new Emoji("theblackline", "尷尬", "tieba"),
 	new Emoji("tear", "大哭", "tieba"),
-	new Emoji("surprised", "惊哭", "tieba"),
-	new Emoji("surprised2", "惊讶", "tieba"),
-	new Emoji("spray", "喷", "tieba"),
-	new Emoji("spit", "呕吐", "tieba"),
+	new Emoji("surprised", "驚哭", "tieba"),
+	new Emoji("surprised2", "驚訝", "tieba"),
+	new Emoji("spray", "噴", "tieba"),
+	new Emoji("spit", "嘔吐", "tieba"),
 	new Emoji("smilingeyes", "笑眼", "tieba"),
-	new Emoji("shui", "睡觉", "tieba"),
+	new Emoji("shui", "睡覺", "tieba"),
 	new Emoji("shame", "羞辱", "tieba"),
 	new Emoji("se", "色", "tieba"),
-	new Emoji("rmb", "钱", "tieba"),
-	new Emoji("reluctantly", "勉强", "tieba"),
-	new Emoji("rbq", "观望", "tieba"),
-	new Emoji("niconiconi", "爱你", "tieba"),
+	new Emoji("rmb", "錢", "tieba"),
+	new Emoji("reluctantly", "勉強", "tieba"),
+	new Emoji("rbq", "觀望", "tieba"),
+	new Emoji("niconiconi", "愛你", "tieba"),
 	new Emoji("naive", "天真", "tieba"),
 	new Emoji("ku", "酷", "tieba"),
 	new Emoji("huaji", "滑稽", "tieba"),
@@ -414,12 +414,12 @@ const tiebaEmoji = [
 	new Emoji("good", "棒", "tieba"),
 	new Emoji("doubt", "疑惑", "tieba"),
 	new Emoji("britan", "茶", "tieba"),
-	new Emoji("bbd", "棒棒哒", "tieba"),
-	new Emoji("awesome", "强", "tieba"),
-	new Emoji("anger", "愤怒", "tieba"),
+	new Emoji("bbd", "棒棒噠", "tieba"),
+	new Emoji("awesome", "強", "tieba"),
+	new Emoji("anger", "憤怒", "tieba"),
 	new Emoji("aa", "啊啊", "tieba"),
-	new Emoji("happy", "高兴", "tieba"),
-	new Emoji("grievance", "郁闷", "tieba"),
+	new Emoji("happy", "高興", "tieba"),
+	new Emoji("grievance", "鬱悶", "tieba"),
 ];
 
 const menheraEmoji = [
@@ -478,7 +478,7 @@ const emojiData = [
 var Utils = {
 	_version: "1.0.0",
 	/**
-   * 是否移动设备
+   * 是否移動裝置
    */
 	isMobile() {
 		if (
@@ -498,7 +498,7 @@ var Utils = {
    * @param {*} time
    */
 	timeAgo(time) {
-		if (!time) return "未知时间";
+		if (!time) return "未知時間";
 		time = new Date(time).getTime();
 		var currentTime = new Date().getTime();
 		var between = currentTime - time;
@@ -512,15 +512,15 @@ var Utils = {
 				if (minutes === 0) {
 					var leave3 = leave2 % (60 * 1000);
 					var seconds = Math.round(leave3 / 1000);
-					if (seconds < 1) return "刚刚";
+					if (seconds < 1) return "剛剛";
 					return seconds + " 秒前";
 				}
-				return minutes + " 分钟前";
+				return minutes + " 分鐘前";
 			}
 			// return Utils.formatDate(time, "今天 hh:mm");
-			return hours + " 小时前";
+			return hours + " 小時前";
 		}
-		if (days < 0) return "刚刚";
+		if (days < 0) return "剛剛";
 		// if (days < 1) {
 		//   return days + " 天前";
 		// } else {
@@ -533,7 +533,7 @@ var Utils = {
 		}
 	},
 	/**
-   * 时间格式化
+   * 時間格式化
    * @param {*} time
    */
 	formatDate(date, fmt = "yyyy-MM-dd") {
@@ -563,28 +563,28 @@ var Utils = {
 		return fmt;
 	},
 	/**
-   * 获取当前浏览器语言
-   * 使用当前方法，只会得到语言前两个字符
+   * 獲取當前瀏覽器語言
+   * 使用當前方法，只會得到語言前兩個字元
    * @return zh、cn 等
    */
 	getNavLangSub() {
 		var currentLang = navigator.language;
-		// 只获取前两个字符
+		// 只獲取前兩個字元
 		currentLang = currentLang.substr(0, 2);
-		//判断IE浏览器使用语言
+		//判斷IE瀏覽器使用語言
 		if (!currentLang) {
 			currentLang = navigator.browserLanguage;
 		}
 		return currentLang;
 	},
-	/* 获取URL中带的链接参数
-   * @param search 链接后缀
-   * @return {{}} 对象
+	/* 獲取URL中帶的連結引數
+   * @param search 連結字尾
+   * @return {{}} 物件
    */
 	getUrlParams() {
 		var search = location.search;
 
-		// 判断是否为字符串类型
+		// 判斷是否為字串型別
 		if (typeof search !== "string") {
 			search = search.toString();
 		}
@@ -592,20 +592,20 @@ var Utils = {
 		var paramsSplit = search.replace(/^[^\?]*\?/i, "").split(/&/);
 		var params = {};
 
-		// 数据为空
+		// 資料為空
 		if (paramsSplit.length < 1) {
 			return params;
 		}
 
 		if (Array.isArray(paramsSplit)) {
 			paramsSplit.forEach(function (item) {
-				// 数据为空, 退出方法
+				// 資料為空, 退出方法
 				if (!item) {
 					return false;
 				}
 				var itemSplit = item.split(/=/);
 
-				// 判断字符串中是否有多个=
+				// 判斷字串中是否有多個=
 				if (itemSplit.length >= 2) {
 					// 是
 					var key = itemSplit.splice(0, 1);
@@ -615,7 +615,7 @@ var Utils = {
 		}
 		return params;
 	},
-	/* 请求封装 */
+	/* 請求封裝 */
 	request({
 		url = "",
 		method = "GET",
@@ -652,8 +652,8 @@ var Utils = {
 					const errMsg = err
 						? err.responseJSON
 							? err.responseJSON.message
-							: "出错了！"
-						: "出错了！";
+							: "出錯了！"
+						: "出錯了！";
 					Qmsg.error(errMsg);
 					reject(errMsg);
 				},
@@ -686,12 +686,12 @@ var Utils = {
 		return new Promise((resolve) => setTimeout(resolve, ms));
 	},
 	/**
-   * 存储数据到浏览器的 cookie 内
-   * 不建议向 cookie 内存入大量数据，如果有大数据需求的话
-   * 或许可以考虑 {@link Util#setLocalStorageByJSON}
-   * @param {String} key 需要存储的 key
-   * @param {String} value 需要存储在 cookie 内的值
-   * @param {Number} days 存储时间。单位/天。不输入则为永久存储
+   * 儲存資料到瀏覽器的 cookie 內
+   * 不建議向 cookie 記憶體入大量資料，如果有大資料需求的話
+   * 或許可以考慮 {@link Util#setLocalStorageByJSON}
+   * @param {String} key 需要儲存的 key
+   * @param {String} value 需要儲存在 cookie 內的值
+   * @param {Number} days 儲存時間。單位/天。不輸入則為永久儲存
    */
 	setCookie(key, value, days) {
 		var keyVE = key + Utils._version,
@@ -705,9 +705,9 @@ var Utils = {
 	},
 
 	/**
-   * 获取存储在浏览器 cookie 内的数据
+   * 獲取儲存在瀏覽器 cookie 內的資料
    * @param {String} key
-   * @return 如果没能获取到数据，则返回 null。否则，返回目标数据字符串
+   * @return 如果沒能獲取到資料，則返回 null。否則，返回目標資料字串
    */
 	getCookie(key) {
 		var keyVE = key + Utils._version + "=";
@@ -723,8 +723,8 @@ var Utils = {
 	},
 
 	/**
-   * 删除存储在浏览器 cookie 内的数据
-   * @param {String} key 需要删除的 key
+   * 刪除儲存在瀏覽器 cookie 內的資料
+   * @param {String} key 需要刪除的 key
    */
 	removeCookie(key) {
 		var keyVE = key + Utils._version + "=";
@@ -733,11 +733,11 @@ var Utils = {
 	},
 
 	/**
-   * 存储 JSON 数据到浏览器的 localstorage 里
-   * 当前方法不支持永久存储
-   * @param {String} key 需要存储的 key
-   * @param {JSON} value 需要存储的JSON数据
-   * @param {Number} expires 存储时间。单位/秒。【默认 3600秒（一小时）】
+   * 儲存 JSON 資料到瀏覽器的 localstorage 裡
+   * 當前方法不支援永久儲存
+   * @param {String} key 需要儲存的 key
+   * @param {JSON} value 需要儲存的JSON資料
+   * @param {Number} expires 儲存時間。單位/秒。【預設 3600秒（一小時）】
    */
 	setLocalStorage(key, value, expires = 3600) {
 		var keyVE = key + Utils._version;
@@ -753,7 +753,7 @@ var Utils = {
 			);
 		} catch (e) {
 			if (e.name === "QuotaExceededError") {
-				console.log("数据已满，自动清空");
+				console.log("資料已滿，自動清空");
 				localStorage.clear();
 				setLocalStorage(key, value, expires);
 			}
@@ -761,9 +761,9 @@ var Utils = {
 	},
 
 	/**
-   * 根据 key 获取存储在 localstorage 内的 JSON 数据【KEY 会自动加上 util 的版本号】
-   * @param {String} key 需要读取数据的 key
-   * @return 返回 JSON 格式的数据，如果不存在或者过期了，则返回 null
+   * 根據 key 獲取儲存在 localstorage 內的 JSON 資料【KEY 會自動加上 util 的版本號】
+   * @param {String} key 需要讀取資料的 key
+   * @return 返回 JSON 格式的資料，如果不存在或者過期了，則返回 null
    */
 	getLocalStorage(key) {
 		var keyVE = key + Utils._version;
@@ -779,8 +779,8 @@ var Utils = {
 	},
 
 	/**
-   * 删除保存在 localStorage 中的数据
-   * @param {*} key 需要删除的 key【会自动加上 util 的版本号】
+   * 刪除儲存在 localStorage 中的資料
+   * @param {*} key 需要刪除的 key【會自動加上 util 的版本號】
    */
 	removeLocalStorage(key) {
 		var keyVE = key + Utils._version;
@@ -789,28 +789,28 @@ var Utils = {
 	},
 
 	/**
-   * 异步加载 JS
-   * @param {*} url 需要加载 JS 地址
-   * @param {*} callback 加载完成回调
+   * 非同步載入 JS
+   * @param {*} url 需要載入 JS 地址
+   * @param {*} callback 載入完成回撥
    */
 	loadJS(url, callback) {
 		Utils._loadRes("script", url, callback);
 	},
 
 	/**
-   * 异步加载 CSS
-   * @param {*} url 需要加载的 CSS 地址
-   * @param {*} callback 加载完成回调
+   * 非同步載入 CSS
+   * @param {*} url 需要載入的 CSS 地址
+   * @param {*} callback 載入完成回撥
    */
 	loadCSS(url, callback) {
 		Utils._loadRes("link", url, callback);
 	},
 
 	/**
-   * 异步加载资源 *私有方法（不建议直接调用）*
-   * @param {*} type 当前需要加载的资源类型
-   * @param {*} url 资源 链接地址
-   * @param {*} callback 加载完成回调函数
+   * 非同步載入資源 *私有方法（不建議直接呼叫）*
+   * @param {*} type 當前需要載入的資源型別
+   * @param {*} url 資源 連結地址
+   * @param {*} callback 載入完成回撥函式
    */
 	_loadRes(type, url, callback) {
 		var dom,
@@ -828,7 +828,7 @@ var Utils = {
 			dom.href = url;
 			break;
 		default:
-			console.warn("暂不支持：" + type + " 类型");
+			console.warn("暫不支援：" + type + " 型別");
 			return;
 		}
 		//IE
@@ -840,7 +840,7 @@ var Utils = {
 				}
 			};
 		} else {
-			//其他浏览器
+			//其他瀏覽器
 			dom.onload = function () {
 				fn();
 			};
@@ -851,10 +851,10 @@ var Utils = {
 	},
 
 	/**
-   * 获取随机颜色值
-   * 当获取的值越小，色调越偏冷
-   * @param {Number} min 色调值，0 - 1 之间的值
-   * @param {Number} max 色调值，需要大于min且为0 - 1之间的值
+   * 獲取隨機顏色值
+   * 當獲取的值越小，色調越偏冷
+   * @param {Number} min 色調值，0 - 1 之間的值
+   * @param {Number} max 色調值，需要大於min且為0 - 1之間的值
    */
 	getRandomColor(min = 0, max = 1) {
 		if (!min) {
@@ -876,9 +876,9 @@ var Utils = {
 		);
 	},
 	/**
-   * 删除元素的 class，可根据前缀来删除
-   * @param {*} el 需要删除的 dom 元素
-   * @param {*} prefix 需要删除的 class，可以仅为前缀
+   * 刪除元素的 class，可根據字首來刪除
+   * @param {*} el 需要刪除的 dom 元素
+   * @param {*} prefix 需要刪除的 class，可以僅為字首
    */
 	removeClassByPrefix(el, prefix) {
 		const classes = el.className.split(" ").filter(function (c) {
@@ -923,7 +923,7 @@ var Utils = {
 		return str.replace(/^((\s|&nbsp;)*\r?\n)+/g, "");
 	},
 	/**
-   * 判断需要渲染的 HTML 是否属于表情包，如果不属于，则去除此 HTML，仅保留文字
+   * 判斷需要渲染的 HTML 是否屬於表情包，如果不屬於，則去除此 HTML，僅保留文字
    */
 	removeNotEmoji(doc) {
 		const smilies = doc.getElementsByClassName("emoji-img");
@@ -957,10 +957,10 @@ var Utils = {
 		node.parentNode.replaceChild(textNode, node);
 	},
 	/**
-   * 根据条件查找表情
+   * 根據條件查詢表情
    * @param {*} type
    * @param {*} name
-   * @returns 返回 true 则表示表情存在，返回 false 则表示不存在
+   * @returns 返回 true 則表示表情存在，返回 false 則表示不存在
    */
 	findEmoji(type, name) {
 		return (

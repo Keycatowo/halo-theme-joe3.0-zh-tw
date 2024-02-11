@@ -1,4 +1,4 @@
-/* 随机样式 */
+/* 隨機樣式 */
 let _index = 100;
 const colors = [
 	"#dcc10c",
@@ -39,7 +39,7 @@ const colors = [
 	"#f9bb3c",
 	"#e8583d",
 	"#f68e5f",
-]; // 定义你的颜色数组
+]; // 定義你的顏色陣列
 const random = (min, max) =>
 	Math.floor(Math.random() * (max - min + 1)) + min;
 const $el = $(".joe_leaving-list");

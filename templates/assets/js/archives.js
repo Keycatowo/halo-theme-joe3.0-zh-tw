@@ -1,6 +1,6 @@
-/**归档页逻辑 */
+/**歸檔頁邏輯 */
 const archivesContext = {
-	/* 内容折叠/展开 */
+	/* 內容摺疊/展開 */
 	initExpander() {
 		$(".joe_archives-timelist .panel").on("click", function (e) {
 			e.stopPropagation();

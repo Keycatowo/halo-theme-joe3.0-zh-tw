@@ -1,4 +1,4 @@
-/* 获取直属子元素 */
+/* 獲取直屬子元素 */
 function getChildren(el, className) {
 	for (let item of el.children) if (item.className === className) return item;
 	return null;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				this.innerHTML = `
 				<span class="joe_mtitle">
 					<span class="joe_mtitle__text">
-						${this.getAttribute("title") || "默认标题"}
+						${this.getAttribute("title") || "預設標題"}
 					</span>
 				</span>
 			`;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 			this.render();
 	// 		}
 	// 		render() {
-	// 			if (!this.options.src) return (this.innerHTML = "pdf地址未填写！");
+	// 			if (!this.options.src) return (this.innerHTML = "pdf地址未填寫！");
 	// 			this.innerHTML = `
 	// 			<div class="joe_pdf">
 	//         <iframe src="${ThemeConfig.BASE_RES_URL}/source/lib/pdfjs/web/viewer.html?file=${this.options.src}" style="width:${this.options.width};height:${this.options.height}"></iframe>
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				this.render();
 			}
 			render() {
-				if (!this.options.url) return (this.innerHTML = "音频地址未填写！");
+				if (!this.options.url) return (this.innerHTML = "音訊地址未填寫！");
 				this.innerHTML =
           "<span style=\"display: block\" class=\"_content\"></span>";
 				new APlayer({
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				this.render();
 			}
 			render() {
-				if (!this.options.id) return (this.innerHTML = "网易云歌曲ID未填写！");
+				if (!this.options.id) return (this.innerHTML = "網易雲歌曲ID未填寫！");
 				this.innerHTML =
           "<span style=\"display: block\" class=\"_content\"></span>";
 				fetch(
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				this.render();
 			}
 			render() {
-				if (!this.options.id) return (this.innerHTML = "网易云歌单ID未填写！");
+				if (!this.options.id) return (this.innerHTML = "網易雲歌單ID未填寫！");
 				this.innerHTML =
           "<span style=\"display: block\" class=\"_content\"></span>";
 				fetch(
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					color: this.getAttribute("color") || "#ff6800",
 					href: this.getAttribute("href") || "#",
 					radius: this.getAttribute("radius") || "17.5px",
-					content: this.getAttribute("content") || "多彩按钮",
+					content: this.getAttribute("content") || "多彩按鈕",
 				};
 				this.innerHTML = `
                     <a class="joe_abtn" style="background: ${this.options.color}; border-radius: ${this.options.radius}" href="${this.options.href}" target="_blank" rel="noopener noreferrer nofollow">
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					)
 						? this.getAttribute("type")
 						: "secondary",
-					content: this.getAttribute("content") || "标签按钮",
+					content: this.getAttribute("content") || "標籤按鈕",
 				};
 				this.innerHTML = `
 					<a class="joe_anote ${this.options.type}" href="${this.options.href}" target="_blank" rel="noopener noreferrer nofollow">
@@ -221,31 +221,31 @@ document.addEventListener("DOMContentLoaded", () => {
 				super();
 				this.options = {
 					type: this.getAttribute("type") || "default",
-					title: this.getAttribute("title") || "默认标题",
+					title: this.getAttribute("title") || "預設標題",
 					url: this.getAttribute("url"),
 					password: this.getAttribute("password"),
 				};
 				const type = {
-					default: "默认网盘",
-					360: "360网盘",
-					bd: "百度网盘",
-					ty: "天翼网盘",
-					ct: "城通网盘",
-					wy: "微云网盘",
-					github: "Github仓库",
-					gitee: "Gitee仓库",
-					lz: "蓝奏云网盘",
-					ad: "阿里云盘",
+					default: "預設網盤",
+					360: "360網盤",
+					bd: "百度網盤",
+					ty: "天翼網盤",
+					ct: "城通網盤",
+					wy: "微雲網盤",
+					github: "Github倉庫",
+					gitee: "Gitee倉庫",
+					lz: "藍奏雲網盤",
+					ad: "阿里雲盤",
 				};
 				this.innerHTML = `
 					<span class="joe_cloud">
 						<div class="joe_cloud__logo _${this.options.type}"></div>
 						<div class="joe_cloud__describe">
 							<div class="joe_cloud__describe-title">${this.options.title}</div>
-							<div class="joe_cloud__describe-type">来源：${
-	type[this.options.type] || "默认网盘"
+							<div class="joe_cloud__describe-type">來源：${
+	type[this.options.type] || "預設網盤"
 }${
-	this.options.password ? " | 提取码：" + this.options.password : ""
+	this.options.password ? " | 提取碼：" + this.options.password : ""
 }</div>
 						</div>
 						<a class="joe_cloud__btn" href="${
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 			render() {
 				this.innerHTML =
-          "<div class=\"joe_read_limited\"><p><i class=\"joe-font joe-icon-locker\" style=\"color:#f5840d;\"></i>&nbsp;此处内容仅 <span class=\"joe_read_limited__button\">评论</span> 后可见</p></div>";
+          "<div class=\"joe_read_limited\"><p><i class=\"joe-font joe-icon-locker\" style=\"color:#f5840d;\"></i>&nbsp;此處內容僅 <span class=\"joe_read_limited__button\">評論</span> 後可見</p></div>";
 				this.$button = this.querySelector(".joe_read_limited__button");
 				const $comment = document.querySelector(".joe_comment");
 				const $header = document.querySelector(".joe_header");
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					e.stopPropagation();
 					if (!Boolean(document.querySelector('[id*="comment-"]')) &&!Boolean(document.querySelector("#waline"))) {
 
-						Qmsg.warning("评论功能不可用！");
+						Qmsg.warning("評論功能不可用！");
 						return;
 					}
 					const scrollTop = $comment.offsetTop - $header.offsetHeight - 15;
@@ -303,10 +303,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				const _temp = getChildren(this, "_temp");
 				this.options = {
 					width: this.getAttribute("width") || "100%",
-					label: this.getAttribute("label") || "卡片标题",
+					label: this.getAttribute("label") || "卡片標題",
 					content:
             _temp.innerHTML.trim().replace(/^(<br>)|(<br>)$/g, "") ||
-            "卡片内容",
+            "卡片內容",
 				};
 				const htmlStr = `
 				<div class="joe_card__default" style="width: ${this.options.width}">
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					)
 						? this.getAttribute("type")
 						: "info",
-					content: this.getAttribute("content") || "消息内容",
+					content: this.getAttribute("content") || "訊息內容",
 				};
 				this.innerHTML = `
 					<span class="joe_message ${this.options.type}">
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					color: this.getAttribute("color") || "#f0ad4e",
 					content:
             _temp.innerHTML.trim().replace(/^(<br>)|(<br>)$/g, "") ||
-            "标注内容",
+            "標註內容",
 				};
 				const htmlStr = `
 					<div class="joe_callout" style="border-left-color: ${this.options.color};">
@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					title: this.getAttribute("title") || "卡片描述",
 					content:
             _temp.innerHTML.trim().replace(/^(<br>)|(<br>)$/g, "") ||
-            "卡片内容",
+            "卡片內容",
 				};
 				const htmlStr = `
 					<div class="joe_card__describe">
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 				);
 				
-				_temp.parentNode.removeChild(_temp); // 清理无用标签
+				_temp.parentNode.removeChild(_temp); // 清理無用標籤
 			}
 		}
 	);
@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					this.appendChild(span);
 				}
 				this.querySelectorAll(".joe_collapse__item").forEach((item) => {
-					const label = item.getAttribute("label") || "折叠标题";
+					const label = item.getAttribute("label") || "摺疊標題";
 					const head = getChildren(item, "joe_collapse__item-head");
 					const headLabel = getChildren(head, "joe_collapse__item-head--label");
 					headLabel.innerHTML = label;
@@ -636,7 +636,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					}" style="width:${this.options.width};height:${
 						this.options.height
 					}"></iframe>`;
-				else this.innerHTML = "视频地址未填写！";
+				else this.innerHTML = "影片地址未填寫！";
 			}
 		}
 	);
@@ -657,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			render() {
 				if (this.options.bvid)
 					this.innerHTML = `<iframe allowfullscreen="true" class="joe_vplayer" src="//player.bilibili.com/player.html?bvid=${this.options.bvid}&page=${this.options.page}" style="width:${this.options.width};height:${this.options.height}"></iframe>`;
-				else this.innerHTML = "bvid未填写！";
+				else this.innerHTML = "bvid未填寫！";
 			}
 		}
 	);
@@ -737,7 +737,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (index === 0) item.click();
 				});
 				
-				_temp.parentNode.removeChild(_temp); // 清理无用标签
+				_temp.parentNode.removeChild(_temp); // 清理無用標籤
 			}
 		}
 	);
@@ -788,8 +788,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			constructor() {
 				super();
 				this.options = {
-					title: this.getAttribute("title") || "点击复制",
-					content: this.getAttribute("content") || "默认文本",
+					title: this.getAttribute("title") || "點選複製",
+					content: this.getAttribute("content") || "預設文字",
 					color: this.getAttribute("color") || "inherit",
 					bold: this.getAttribute("bold") != null ? "bold" : "normal",
 				};
@@ -798,11 +798,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				if (typeof ClipboardJS !== "undefined" && typeof Qmsg !== "undefined") {
 					new ClipboardJS(button, { text: () => this.options.content }).on(
 						"success",
-						() => Qmsg.success("复制成功！")
+						() => Qmsg.success("複製成功！")
 					);
 				} else {
 					button.addEventListener("click", () =>
-						alert("该功能请前往前台查看！")
+						alert("該功能請前往前臺檢視！")
 					);
 				}
 			}

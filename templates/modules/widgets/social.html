@@ -1,5 +1,5 @@
 
-<#--  社交账号模板  -->
+<#--  社交賬號模板  -->
 <div class="social-account" xmlns:th="http://www.thymeleaf.org">
   <th:block th:fragment="github">
   <a class="github" th:href="${socials.socialUrl}" target="_blank" title="Github" rel="noopener noreferrer nofollow">
@@ -22,7 +22,7 @@
 </a>
   </th:block>
   <th:block th:fragment="juejin">
-<a class="juejin" th:href="${socials.socialUrl}" target="_blank" title="掘金社区" rel="noopener noreferrer nofollow">
+<a class="juejin" th:href="${socials.socialUrl}" target="_blank" title="掘金社群" rel="noopener noreferrer nofollow">
   <svg viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" width="22" height="22"><path d="M15.0737 5.80396H15.0757L18.706 2.91722L15.0757 0.00406298L15.0717 0L11.4475 2.91112L15.0717 5.80193L15.0737 5.80396ZM15.0757 14.9111L15.0778 14.9091L24.4429 7.52057L21.9036 5.48096L15.0778 10.8664L15.0757 10.8685L15.0737 10.8705L8.2479 5.48502L5.71057 7.52463L15.0737 14.9132L15.0757 14.9111ZM15.0716 19.9614L15.0757 19.9593L27.614 10.066L30.1534 12.1056L24.449 16.6053L15.0757 24L0.243779 12.3047L0 12.1117L2.53936 10.0721L15.0716 19.9614Z" fill="#1E80FF"/></svg>
 </a>
   </th:block>
@@ -42,8 +42,8 @@
 </a>
   </th:block>
   <th:block th:fragment="email">
-<!--<#&#45;&#45;  <a th:href="'mailto:youemail@mail.com?subject=邮件标题&body=邮件内容">告诉我</a>  &ndash;&gt;-->
-<a class="email" th:href="'mailto:'+${socials.socialUrl}" target="_blank" title="邮箱" rel="noopener noreferrer nofollow">
+<!--<#&#45;&#45;  <a th:href="'mailto:youemail@mail.com?subject=郵件標題&body=郵件內容">告訴我</a>  &ndash;&gt;-->
+<a class="email" th:href="'mailto:'+${socials.socialUrl}" target="_blank" title="郵箱" rel="noopener noreferrer nofollow">
   <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="22"><path d="M512 938.666667C276.352 938.666667 85.333333 747.648 85.333333 512S276.352 85.333333 512 85.333333s426.666667 191.018667 426.666667 426.666667-191.018667 426.666667-426.666667 426.666667z m341.333333-426.666667a341.333333 341.333333 0 1 0-169.301333 294.869333l-43.008-73.685333A256 256 0 1 1 768 512v42.666667a42.666667 42.666667 0 0 1-85.333333 0V384h-57.770667a170.666667 170.666667 0 1 0 2.816 253.44A128 128 0 0 0 853.333333 554.666667v-42.666667z m-341.333333-85.333333a85.333333 85.333333 0 1 1 0 170.666666 85.333333 85.333333 0 0 1 0-170.666666z" fill="#dc4835"></path></svg>
 </a>
   </th:block>

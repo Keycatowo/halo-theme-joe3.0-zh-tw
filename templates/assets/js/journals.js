@@ -1,6 +1,6 @@
-/**文章页逻辑 */
+/**文章頁邏輯 */
 const journalContext = {
-	/* 激活列表特效 */
+	/* 啟用列表特效 */
 	initEffect() {
 		$(".joe_loading").remove();
 		$(".joe_journals__list").removeClass("hidden");
@@ -14,7 +14,7 @@ const journalContext = {
 		}).init();
 	},
 
-	/* 日志发布时间格式化 */
+	/* 日誌釋出時間格式化 */
 	formatTime() {
 		const $allJournalTime = $(".joe_journal-posttime");
 		$allJournalTime.each(function () {
@@ -22,7 +22,7 @@ const journalContext = {
 			$this.html(Utils.timeAgo($this.text()));
 		});
 	},
-	/* 点赞 */
+	/* 點贊 */
 	initLike() {
 		if (!ThemeConfig.enable_like_journal) return;
 		const $allItems = $(".joe_journal__item");
@@ -96,7 +96,7 @@ const journalContext = {
 			});
 		}
 	},
-	/* 评论及折叠 */
+	/* 評論及摺疊 */
 	initComment() {
 		if (ThemeConfig.enable_clean_mode || !ThemeConfig.enable_comment_journal)
 			return;
@@ -105,7 +105,7 @@ const journalContext = {
 			const $this = $(this);
 			const $parent = $this.parents(".footer-wrap");
 			// const compComment = $parent.find("halo-comment")[0]._wrapper.$refs.inner;
-			// 展开加载评论
+			// 展開載入評論
 			// if (!$parent.hasClass("open")) {
 			// 	return;
 			// }
@@ -113,17 +113,17 @@ const journalContext = {
 			$parent.toggleClass("open");
 			$parent
 				.find(".journal_comment_expander_txt")
-				.html(($parent.hasClass("open") ? "收起" : "查看") + "评论");
+				.html(($parent.hasClass("open") ? "收起" : "檢視") + "評論");
 		});
 	},
-	/* 内容折叠/展开 */
+	/* 內容摺疊/展開 */
 	initExpander() {
 		$(".journal_content_expander i").on("click", function (e) {
 			e.stopPropagation();
 			$(this).parents(".joe_journal_body").toggleClass("open");
 		});
 	},
-	/* 日志块折叠 */
+	/* 日誌塊摺疊 */
 	foldBlock() {
 		const $allBlocks = $(".joe_journal_body .content-wrp");
 		$allBlocks.each(function () {

@@ -1,8 +1,8 @@
-/**统计页逻辑 */
+/**統計頁邏輯 */
 const censusContext = {
-	/* 系统数据 */
+	/* 系統資料 */
 	system() {
-		/* 转换字节 */
+		/* 轉換位元組 */
 		const bytesToSize = (bytes) => {
 			if (!bytes) return "0 B";
 			const k = 1000,
@@ -10,7 +10,7 @@ const censusContext = {
 				i = Math.floor(Math.log(bytes) / Math.log(k));
 			return (bytes / Math.pow(k, i)).toPrecision(3) + " " + sizes[i];
 		};
-		/* 转换内存 */
+		/* 轉換記憶體 */
 		const megaknotsToSize = (limit) => {
 			if (limit < 1024) return parseInt(limit) + " MB";
 			return parseInt(limit / 1024) + " GB";
@@ -34,17 +34,17 @@ const censusContext = {
 				},
 			})
 				.then((res) => {
-					if (!res.status) Qmsg.warning("服务器接口异常！");
+					if (!res.status) Qmsg.warning("伺服器介面異常！");
 					{
 						$(".joe_census__server-item .count .core").html(`${res.cpu[1]} 核`);
 						$(".joe_census__server-item .count .ram").html(
 							`${megaknotsToSize(res.memory.memTotal)}`
 						);
 						$(".joe_census__server-item .count .up").html(
-							`总发送：${bytesToSize(res.upTotal)}`
+							`總髮送：${bytesToSize(res.upTotal)}`
 						);
 						$(".joe_census__server-item .count .down").html(
-							`总接收：${bytesToSize(res.downTotal)}`
+							`總接收：${bytesToSize(res.downTotal)}`
 						);
 						const stamp = new Date();
 						const hours = String(stamp.getHours()).padStart(2, 0);
@@ -59,7 +59,7 @@ const censusContext = {
 						if (downSeries.length > 5) downSeries.shift();
 						flowChart.setOption({
 							title: {
-								subtext: "单位 KB/s",
+								subtext: "單位 KB/s",
 							},
 							grid: {
 								left: "3%",
@@ -105,7 +105,7 @@ const censusContext = {
 											},
 										},
 									},
-									stack: "总量",
+									stack: "總量",
 									data: upSeries,
 								},
 								{
@@ -125,36 +125,36 @@ const censusContext = {
 											},
 										},
 									},
-									stack: "总量",
+									stack: "總量",
 									data: downSeries,
 								},
 							],
 						});
 					}
 					{
-						/* CPU占用 */
+						/* CPU佔用 */
 						const cpuUse = res.cpu[0];
-						/* 内存占用 */
+						/* 記憶體佔用 */
 						const memoryRealUse =
               Math.round(
               	(res.memory.memRealUsed / res.memory.memTotal) * 1000
               ) / 10;
-						/* 内存缓冲 */
+						/* 記憶體緩衝 */
 						const memoryCacheUse =
               Math.round((res.memory.memCached / res.memory.memTotal) * 1000) /
               10;
-						/* 系统缓冲 */
+						/* 系統緩衝 */
 						const memoryBufferUse =
               Math.round((res.memory.memBuffers / res.memory.memTotal) * 1000) /
               10;
-						/* 系统负载 */
+						/* 系統負載 */
 						const systemLoad =
               Math.round((res.load.one / res.load.max) * 100) > 100
               	? 100
               	: Math.round((res.load.one / res.load.max) * 100);
 						workChart.setOption({
 							title: {
-								subtext: "单位 百分比",
+								subtext: "單位 百分比",
 							},
 							tooltip: {
 								trigger: "axis",
@@ -174,11 +174,11 @@ const censusContext = {
 									show: false,
 								},
 								data: [
-									"CPU占用",
-									"内存占用",
-									"系统缓冲",
-									"内存缓冲",
-									"系统负载",
+									"CPU佔用",
+									"記憶體佔用",
+									"系統緩衝",
+									"記憶體緩衝",
+									"系統負載",
 								],
 							},
 							yAxis: {
@@ -188,35 +188,35 @@ const censusContext = {
 							series: {
 								data: [
 									{
-										name: "CPU占用",
+										name: "CPU佔用",
 										value: cpuUse,
 										itemStyle: {
 											color: "#b3c25a",
 										},
 									},
 									{
-										name: "内存占用",
+										name: "記憶體佔用",
 										value: memoryRealUse,
 										itemStyle: {
 											color: "#67b580",
 										},
 									},
 									{
-										name: "系统缓冲",
+										name: "系統緩衝",
 										value: memoryBufferUse,
 										itemStyle: {
 											color: "#86ba71",
 										},
 									},
 									{
-										name: "内存缓冲",
+										name: "記憶體緩衝",
 										value: memoryCacheUse,
 										itemStyle: {
 											color: "#feb041",
 										},
 									},
 									{
-										name: "系统负载",
+										name: "系統負載",
 										value: systemLoad,
 										itemStyle: {
 											color: "#fd7e55",
@@ -243,7 +243,7 @@ const censusContext = {
 				});
 		}
 	},
-	/* 初始化分类统计 */
+	/* 初始化分類統計 */
 	category() {
 		const categoryDom = document.querySelector("#category");
 		const categoryChart = echarts.init(categoryDom);
@@ -270,7 +270,7 @@ const censusContext = {
 			],
 		});
 	},
-	/* 初始化评论统计 */
+	/* 初始化評論統計 */
 	comment() {
 		const latelyDom = document.querySelector("#lately");
 		const latelyChart = echarts.init(latelyDom);
@@ -286,7 +286,7 @@ const censusContext = {
 			.then((res) => {
 				latelyChart.setOption({
 					title: {
-						subtext: "单位 数量",
+						subtext: "單位 數量",
 					},
 					tooltip: {
 						trigger: "axis",
@@ -314,7 +314,7 @@ const censusContext = {
 						type: "value",
 					},
 					series: {
-						name: "数量",
+						name: "數量",
 						itemStyle: {
 							normal: {
 								color: "#91cc75",
@@ -334,7 +334,7 @@ const censusContext = {
 				console.log(err);
 			});
 	},
-	/* 初始化归档 */
+	/* 初始化歸檔 */
 	archive() {
 		let page = 0;
 		function initFiling() {
@@ -352,7 +352,7 @@ const censusContext = {
 				.then((res) => {
 					if (!res.length) {
 						$(".joe_census__filing .item.load").remove();
-						return Qmsg.warning("没有更多内容了");
+						return Qmsg.warning("沒有更多內容了");
 					}
 					let htmlStr = "";
 					res.forEach((item) => {
@@ -377,7 +377,7 @@ const censusContext = {
 						`;
 					});
 					$("#filing").append(htmlStr);
-					$(".joe_census__filing .button").html("加载更多");
+					$(".joe_census__filing .button").html("載入更多");
 				})
 				.catch((err) => {
 					console.log(err);

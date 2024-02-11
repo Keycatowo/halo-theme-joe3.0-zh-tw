@@ -9,7 +9,7 @@ spec:
   formSchema:
     - $formkit: "select"
       name: "enable_aside"
-      label: "是否启用侧边栏"
+      label: "是否啟用側邊欄"
       value: "true"
       options:
         - value: "true"
@@ -18,7 +18,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_page_meta"
-      label: "是否展示页面元信息（即顶部的字数、阅读量等数据）"
+      label: "是否展示頁面元資訊（即頂部的字數、閱讀量等資料）"
       value: "true"
       options:
         - value: "true"
@@ -27,7 +27,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_passage_tips"
-      label: "是否展示温馨提示"
+      label: "是否展示溫馨提示"
       value: "true"
       options:
         - value: "true"
@@ -36,7 +36,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_collect_check"
-      label: "是否启用百度收录检查"
+      label: "是否啟用百度收錄檢查"
       value: "true"
       options:
         - value: "true"
@@ -45,7 +45,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_read_limit"
-      label: "是否开启评论后可见"
+      label: "是否開啟評論後可見"
       value: "false"
       options:
         - value: "true"
@@ -54,7 +54,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "use_raw_content"
-      label: "是否渲染原始内容"
+      label: "是否渲染原始內容"
       value: "false"
       options:
         - value: "true"
@@ -63,7 +63,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_comment"
-      label: "是否启用评论功能"
+      label: "是否啟用評論功能"
       value: "true"
       options:
         - value: "true"
@@ -72,7 +72,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_toc"
-      label: "是否启用 Toc 目录"
+      label: "是否啟用 Toc 目錄"
       value: "true"
       options:
         - value: "true"
@@ -81,26 +81,26 @@ spec:
           label: 否
     - $formkit: "text"
       name: "toc_depth"
-      label: "Toc 目录默认展开层级 0~6，对应标题层级 h1 ～ h6"
+      label: "Toc 目錄預設展開層級 0~6，對應標題層級 h1 ～ h6"
       value: "0"
     - $formkit: "text"
       name: "img_max_width"
-      label: "图片最大宽度"
+      label: "圖片最大寬度"
       value: "100%"
     - $formkit: "select"
       name: "img_align"
-      label: "图片对齐方式"
+      label: "圖片對齊方式"
       value: "center"
       options:
         - value: "center"
           label: 居中
         - value: "left"
-          label: 左对齐
+          label: 左對齊
         - value: "right"
-          label: 右对齐
+          label: 右對齊
     - $formkit: "select"
       name: "enable_copy"
-      label: "是否允许复制内容"
+      label: "是否允許複製內容"
       value: "true"
       options:
         - value: "true"
@@ -109,7 +109,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_donate"
-      label: "是否启用打赏（必须配置好相应二维码）"
+      label: "是否啟用打賞（必須配置好相應二維碼）"
       value: "true"
       options:
         - value: "true"
@@ -118,7 +118,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_share"
-      label: "是否启用分享"
+      label: "是否啟用分享"
       value: "true"
       options:
         - value: "true"
@@ -127,7 +127,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_like"
-      label: "是否启用点赞"
+      label: "是否啟用點贊"
       value: "true"
       options:
         - value: "true"
@@ -136,7 +136,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_fold_long_code"
-      label: "是否开启长代码块自动折叠"
+      label: "是否開啟長程式碼塊自動摺疊"
       value: "true"
       options:
         - value: "true"
@@ -157,7 +157,7 @@ spec:
   formSchema:
     - $formkit: "text"
       name: "icon"
-      label: "图标"
+      label: "圖示"
 
 ---
 
@@ -172,7 +172,7 @@ spec:
   formSchema:
     - $formkit: "select"
       name: "enable_aside"
-      label: "是否启用侧边栏"
+      label: "是否啟用側邊欄"
       value: "true"
       options:
         - value: "true"
@@ -181,7 +181,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_page_meta"
-      label: "是否展示页面元信息（即顶部的字数、阅读量等数据）"
+      label: "是否展示頁面元資訊（即頂部的字數、閱讀量等資料）"
       value: "true"
       options:
         - value: "true"
@@ -190,7 +190,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_passage_tips"
-      label: "是否展示温馨提示"
+      label: "是否展示溫馨提示"
       value: "true"
       options:
         - value: "true"
@@ -199,7 +199,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_collect_check"
-      label: "是否启用百度收录检查"
+      label: "是否啟用百度收錄檢查"
       value: "true"
       options:
         - value: "true"
@@ -208,7 +208,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_read_limit"
-      label: "是否开启评论后可见"
+      label: "是否開啟評論後可見"
       value: "false"
       options:
         - value: "true"
@@ -217,7 +217,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "use_raw_content"
-      label: "是否渲染原始内容"
+      label: "是否渲染原始內容"
       value: "false"
       options:
         - value: "true"
@@ -226,7 +226,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_comment"
-      label: "是否启用评论功能"
+      label: "是否啟用評論功能"
       value: "true"
       options:
         - value: "true"
@@ -235,7 +235,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_toc"
-      label: "是否启用 Toc 目录"
+      label: "是否啟用 Toc 目錄"
       value: "true"
       options:
         - value: "true"
@@ -244,26 +244,26 @@ spec:
           label: 否
     - $formkit: "text"
       name: "toc_depth"
-      label: "Toc 目录默认展开层级 0~6，对应标题层级 h1 ～ h6"
+      label: "Toc 目錄預設展開層級 0~6，對應標題層級 h1 ～ h6"
       value: "0"
     - $formkit: "text"
       name: "img_max_width"
-      label: "图片最大宽度"
+      label: "圖片最大寬度"
       value: "100%"
     - $formkit: "select"
       name: "img_align"
-      label: "图片对齐方式"
+      label: "圖片對齊方式"
       value: "center"
       options:
         - value: "center"
           label: 居中
         - value: "left"
-          label: 左对齐
+          label: 左對齊
         - value: "right"
-          label: 右对齐
+          label: 右對齊
     - $formkit: "select"
       name: "enable_copy"
-      label: "是否允许复制内容"
+      label: "是否允許複製內容"
       value: "true"
       options:
         - value: "true"
@@ -272,7 +272,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_share"
-      label: "是否启用分享"
+      label: "是否啟用分享"
       value: "true"
       options:
         - value: "true"
@@ -281,7 +281,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_like"
-      label: "是否启用点赞"
+      label: "是否啟用點贊"
       value: "true"
       options:
         - value: "true"
@@ -290,7 +290,7 @@ spec:
           label: 否
     - $formkit: "select"
       name: "enable_fold_long_code"
-      label: "是否开启长代码块自动折叠"
+      label: "是否開啟長程式碼塊自動摺疊"
       value: "true"
       options:
         - value: "true"

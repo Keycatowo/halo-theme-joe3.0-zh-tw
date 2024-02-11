@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{modules/layout :: html(title = ${theme.config.photos.photos_title?:'我的图库'}+'-'+${site.title},htmlType = photos,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
+      th:replace="~{modules/layout :: html(title = ${theme.config.photos.photos_title?:'我的相簿'}+'-'+${site.title},htmlType = photos,header = null,leftSidebar = true,content = ~{::content}, head = null, footer = null)}"
 >
 <th:block th:fragment="content">
     <body>
@@ -11,7 +11,7 @@
             <div class="joe_main">
                 <div class="joe_photos__type">
                     <div class="joe_photos__type-title">
-                        <i class="joe-font joe-icon-tupian"></i>&nbsp;[[${theme.config.photos.photos_title?:'我的图库'}]]
+                        <i class="joe-font joe-icon-tupian"></i>&nbsp;[[${theme.config.photos.photos_title?:'我的相簿'}]]
                     </div>
                     <nav class="joe_photos__filter">
                         <ul>
@@ -31,7 +31,7 @@
 
                 <div class="wrapper">
                     <div class="grid " id="image-grid">
-                        <!-- 预留空间 -->
+                        <!-- 預留空間 -->
                     </div>
                     <th:block th:replace="~{modules/macro/loading :: loading}" />
                 </div>

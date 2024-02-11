@@ -14,7 +14,7 @@
 <div class="information">
     <a th:href="${post.status.permalink}" class="title" th:title="${post.spec.title}" target="_blank" rel="noopener noreferrer">
         <th:block th:if="${post.spec.pinned}">
-            <span class="badge" style="display: inline-block">置顶</span>
+            <span class="badge" style="display: inline-block">置頂</span>
         </th:block>
         [[${post.spec.title}]]
     </a>
@@ -35,7 +35,7 @@
                         serverURL: /*[[${theme.config.basic.waline.waline_serverURL}]]*/'',
                         path:/*[[${post.status.permalink}]]*/'' ,
 
-                        // 可选的，用于自定选择器，默认为 `'.waline-pageview-count'`
+                        // 可選的，用於自定選擇器，預設為 `'.waline-pageview-count'`
                         // selector: '.waline-pageview-count',
                     });
                 </script>
